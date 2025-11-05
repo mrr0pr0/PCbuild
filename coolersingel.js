@@ -1,0 +1,200 @@
+const cpuCoolers = [
+  {
+    id: 'nhd15',
+    name: 'Noctua NH-D15',
+    price: 1449,
+    url: 'https://www.komplett.no/product/1154772/datautstyr/pc-komponenter/vifterkjoelingvannkjoeling/cpu-luftkjoeling/noctua-nh-d15-cpu-kjoeler',
+    info: 'High-performance dual-tower air cooler with two 140mm fans — excellent for overclocking and heavy workloads.',
+    type: 'Air',
+    tier: 'premium',
+    bestFor: 'Enthusiast / overclocking builds',
+    image: './imgas/Coller/nhd15.jpg'
+  },
+  {
+    id: 'nhu12a',
+    name: 'Noctua NH-U12A',
+    price: 1449,
+    url: 'https://www.komplett.no/product/1154773/datautstyr/pc-komponenter/vifterkjoelingvannkjoeling/cpu-luftkjoeling/noctua-nh-u12a-cpu-kjoeler',
+    info: 'Top-tier 120mm air cooler with dual NF-A12x25 fans — great thermal performance in a compact footprint.',
+    type: 'Air',
+    tier: 'premium',
+    bestFor: 'High-performance builds in mid-size cases',
+    image: './imgas/Coller/nhu12a.jpg'
+  },
+  {
+    id: 'nhl9i',
+    name: 'Noctua NH-L9i',
+    price: 599,
+    url: 'https://www.komplett.no/product/770812/datautstyr/pc-komponenter/vifterkjoelingvannkjoeling/cpu-luftkjoeling/noctua-nh-l9i-cpu-kjoeler',
+    info: 'Ultra-low profile cooler (≈37mm) ideal for small form factor and HTPC builds.',
+    type: 'Air',
+    tier: 'budget/mid',
+    bestFor: 'Small form factor PCs',
+    image: './imgas/Coller/nhl9i.jpg'
+  },
+  {
+    id: 'nhu12s',
+    name: 'Noctua NH-U12S SE-AM4',
+    price: 1099,
+    url: 'https://www.komplett.no/product/914743/datautstyr/pc-komponenter/vifterkjoelingvannkjoeling/cpu-luftkjoeling/noctua-nh-u12s-se-am4-cpu-kjoeler',
+    info: 'Slim single-tower design optimized for AM4/AM5 — good RAM clearance and quiet operation.',
+    type: 'Air',
+    tier: 'mid-range',
+    bestFor: 'Tight builds and quiet systems',
+    image: './imgas/Coller/nhu12s.jpg'
+  },
+  {
+    id: 'nhd12l',
+    name: 'Noctua NH-D12L',
+    price: 1249,
+    url: 'https://www.komplett.no/product/1213170/datautstyr/pc-komponenter/vifterkjoelingvannkjoeling/cpu-luftkjoeling/noctua-nh-d12l-d-type-premium-cpu-kjoeler',
+    info: 'Low-height D-type cooler — combines strong cooling with improved case compatibility.',
+    type: 'Air',
+    tier: 'high-mid',
+    bestFor: 'Cases with limited height needing solid cooling',
+    image: './imgas/Coller/nhd12l.jpg'
+  },
+  {
+    id: 'af36',
+    name: 'Arctic Freezer 36',
+    price: 499,
+    url: 'https://www.komplett.no/product/1310156/datautstyr/pc-komponenter/vifterkjoelingvannkjoeling/cpu-luftkjoeling/arctic-freezer-36-kjoeler-sort',
+    info: 'Value single-tower cooler with good performance for the price — strong choice for budget gaming builds.',
+    type: 'Air',
+    tier: 'budget',
+    bestFor: 'Entry-level gaming and budget builds',
+    image: './imgas/Coller/af36.jpg'
+  },
+  {
+    id: 'bdr5',
+    name: 'be quiet! Dark Rock 5',
+    price: 899,
+    url: 'https://www.komplett.no/product/1310326/datautstyr/pc-komponenter/vifterkjoelingvannkjoeling/cpu-luftkjoeling/be-quiet-dark-rock-5-cpu-kjoeler',
+    info: 'Silent-focused tower cooler with strong thermal capacity — great balance of noise vs performance.',
+    type: 'Air',
+    tier: 'high-mid',
+    bestFor: 'Silent gaming and workstation builds',
+    image: './imgas/Coller/bdr5.jpg'
+  },
+  {
+    id: 'bpr3lx',
+    name: 'be quiet! Pure Rock Pro 3 LX',
+    price: 661,
+    url: 'https://www.komplett.no/product/1322140/datautstyr/pc-komponenter/vifterkjoelingvannkjoeling/cpu-luftkjoeling/be-quiet-pure-rock-pro-3-lx-cpu-kjoeler',
+    info: 'ARGB illuminated Pure Rock Pro 3 variant — compact but good cooling for mainstream builds.',
+    type: 'Air',
+    tier: 'mid-range',
+    bestFor: 'Mainstream gaming and productivity PCs',
+    image: './imgas/Coller/bpr3lx.jpg'
+  },
+  {
+    id: 'bprs2',
+    name: 'be quiet! Pure Rock Slim 2',
+    price: 409,
+    url: 'https://www.komplett.no/product/1200237/datautstyr/pc-komponenter/vifterkjoelingvannkjoeling/cpu-luftkjoeling/be-quiet-pure-rock-slim-2-cpu-kjoeler',
+    info: 'Slim, low-profile cooler for builds with limited space; good 130W TDP capability.',
+    type: 'Air',
+    tier: 'budget',
+    bestFor: 'Compact or office PCs',
+    image: './imgas/Coller/bprs2.jpg'
+  },
+  {
+    id: 'cn240',
+    name: 'Corsair Nautilus 240 (ARGB / RS series)',
+    price: 949,
+    url: 'https://www.komplett.no/product/1314304/datautstyr/pc-komponenter/vifterkjoelingvannkjoeling/cpu-vannkjoeling/corsair-nautilus-240-argb-cpu-kjoeler-sort',
+    info: 'Corsair Nautilus RS 240 AIO — strong AIO performance with ARGB lighting and compact 240mm radiator.',
+    type: 'AIO',
+    tier: 'mid-range',
+    bestFor: 'High-performance compact builds',
+    image: './imgas/Coller/cn240.jpg'
+  },
+  {
+    id: 'cn360',
+    name: 'Corsair Nautilus 360 (sort)',
+    price: 1349,
+    url: 'https://www.komplett.no/product/1314307/datautstyr/pc-komponenter/vifterkjoelingvannkjoeling/cpu-vannkjoeling/corsair-nautilus-360-cpu-kjoeler-sort',
+    info: 'Corsair Nautilus RS 360 AIO — 360mm radiator for maximum cooling with ARGB fans.',
+    type: 'AIO',
+    tier: 'high-mid',
+    bestFor: 'High-end gaming and multi-core CPUs',
+    image: './imgas/Coller/cn360.jpg'
+  },
+  {
+    id: 'cn240a',
+    name: 'Corsair Nautilus 240 ARGB (hvit)',
+    price: 1389,
+    url: 'https://www.komplett.no/product/1314308/datautstyr/pc-komponenter/vifterkjoelingvannkjoeling/cpu-vannkjoeling/corsair-nautilus-240-argb-cpu-kjoeler-hvit',
+    info: '240mm ARGB AIO in white — great for light-themed builds needing strong cooling and looks.',
+    type: 'AIO',
+    tier: 'mid-range',
+    bestFor: 'Aesthetic builds and high-performance 240mm setups',
+    image: './imgas/Coller/cn240.jpg'
+  },
+  {
+    id: 'cn360a',
+    name: 'Corsair Nautilus 360 ARGB (hvit)',
+    price: 1490,
+    url: 'https://www.komplett.no/product/1314306/datautstyr/pc-komponenter/vifterkjoelingvannkjoeling/cpu-vannkjoeling/corsair-nautilus-360-argb-cpu-kjoeler-hvit',
+    info: '360mm ARGB AIO in white — maximum radiator surface area for demanding CPUs.',
+    type: 'AIO',
+    tier: 'premium',
+    bestFor: 'Enthusiast builds and heavy workloads',
+    image: './imgas/Coller/cn360.jpg'
+  },
+  {
+    id: 'nk240',
+    name: 'NZXT Kraken Plus 240 RGB',
+    price: 1944,
+    url: 'https://www.komplett.no/product/1323980/datautstyr/pc-komponenter/vifterkjoelingvannkjoeling/cpu-vannkjoeling/nzxt-kraken-plus-240-rgb-kjoeler-hvit',
+    info: 'NZXT Kraken Plus 240 — AIO with LCD/pump options and strong cooling performance.',
+    type: 'AIO',
+    tier: 'premium',
+    bestFor: 'Aesthetic enthusiast builds with an LCD pump option',
+    image: './imgas/Coller/nk240.jpg'
+  },
+  {
+    id: 'thermalright-gv360',
+    name: 'Thermalright Grand Vision 360 ARGB',
+    price: 1899,
+    url: 'https://www.komplett.no/product/1321929/datautstyr/pc-komponenter/vifterkjoelingvannkjoeling/cpu-vannkjoeling/thermalright-grand-vision-360-argb-cpu-kjoeler-sort',
+    info: '360mm AIO from Thermalright with ARGB — marketed for high cooling performance with visual flair.',
+    type: 'AIO',
+    tier: 'high-mid',
+    bestFor: 'High-performance and showcase builds',
+    image: './imgas/Coller/thermalright-gv360.jpg'
+  },
+  {
+    id: 'cm-ml240l',
+    name: 'Cooler Master Masterliquid 240L Core',
+    price: 1019,
+    url: 'https://www.komplett.no/product/1250331/datautstyr/pc-komponenter/vifterkjoelingvannkjoeling/cpu-vannkjoeling/cooler-master-masterliquid-240l-core-cpu-kjoeler-sort',
+    info: 'MasterLiquid 240L Core — solid 240mm AIO with Cooler Master pump tech and good value.',
+    type: 'AIO',
+    tier: 'mid-range',
+    bestFor: 'Reliable all-round cooling for mainstream builds',
+    image: './imgas/Coller/cm-ml240l.jpg'
+  },
+  {
+    id: 'cm-atmos-240',
+    name: 'Cooler Master Liquid 240 Atmos ARGB',
+    price: 1278,
+    url: 'https://www.komplett.no/product/1253209/datautstyr/pc-komponenter/vifterkjoelingvannkjoeling/cpu-vannkjoeling/cooler-master-liquid-240-atmos-argb-cpu-kjoeler-sort',
+    info: 'MasterLiquid Atmos 240 — ARGB AIO with customizable pump top and MasterCTRL software support.',
+    type: 'AIO',
+    tier: 'mid-range',
+    bestFor: 'Customizable builds and users who like pump-top modding',
+    image: './imgas/Coller/cm-atmos-240.jpg'
+  },
+  {
+    id: 'enermax-liqtech-xtr',
+    name: 'Enermax LIQTECH XTR',
+    price: 2649,
+    url: 'https://www.komplett.no/product/1324325/datautstyr/pc-komponenter/vifterkjoelingvannkjoeling/cpu-vannkjoeling/enermax-liqtech-xtr-cpu-kjoeler-sort',
+    info: 'Workstation-grade AIO designed for Threadripper/High-TDP CPUs — extremely high cooling capacity.',
+    type: 'AIO',
+    tier: 'workstation/premium',
+    bestFor: 'Threadripper / high-TDP workstation CPUs',
+    image: './imgas/Coller/enermax-liqtech-xtr.jpg'
+  }
+];

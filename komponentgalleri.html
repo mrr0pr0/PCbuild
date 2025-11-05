@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Komponentgalleri - Johan's PC Verden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#1e40af',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        html, body { font-family: 'Inter', sans-serif; }
+        
+        .animate-pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .5; } }
+        
+        .transition-all { transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1); }
+        
+        .component-slideshow {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+        }
+        
+        .dark .component-slideshow {
+            border-color: #374151;
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+        }
+        
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .slide-image {
+            flex: 0 0 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-color: #f8fafc;
+        }
+        
+        .dark .slide-image {
+            background-color: #1f2937;
+        }
+        
+        .nav-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+        
+        .component-slideshow:hover .nav-arrow {
+            opacity: 1;
+        }
+        
+        .nav-arrow:hover {
+            background: rgba(0, 0, 0, 0.8);
+            transform: translateY(-50%) scale(1.1);
+        }
+        
+        .nav-arrow.prev { left: 8px; }
+        .nav-arrow.next { right: 8px; }
+        
+        .slide-indicators {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 4px;
+            z-index: 10;
+        }
+        
+        .indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .indicator.active {
+            background: rgba(255, 255, 255, 0.9);
+            transform: scale(1.2);
+        }
+        
+        .component-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            position: relative;
+        }
+        
+        .component-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+        
+        .dark .component-card {
+            background: rgba(31, 41, 55, 0.9);
+            border-color: rgba(55, 65, 81, 0.8);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+        }
+        
+        .dark .component-card:hover {
+            border-color: rgba(59, 130, 246, 0.6);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .component-card.selected {
+            border-color: #10b981;
+            background: rgba(16, 185, 129, 0.1);
+        }
+        
+        .dark .component-card.selected {
+            border-color: #10b981;
+            background: rgba(16, 185, 129, 0.2);
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        .selected-list {
+            position: sticky;
+            top: 100px;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+        }
+        
+        @media (max-width: 640px) {
+            .component-card { padding: 1rem; }
+            .nav-arrow { width: 28px; height: 28px; font-size: 12px; }
+            .slide-indicators { bottom: 4px; }
+            .indicator { width: 6px; height: 6px; }
+        }
+    </style>
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-50 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-primary">build guide</h1>
+                    </div>
+                    <div class="hidden md:ml-6 md:flex md:space-x-8">
+                        <a href="darkmodeadded.html" class="text-gray-500 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 text-sm font-medium transition-colors duration-200">Hjem</a>
+                        <a href="build guide.html" class="text-gray-500 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 text-sm font-medium transition-colors duration-200">Byggeguide</a>
+                        <a href="#components" class="text-gray-500 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 text-sm font-medium transition-colors duration-200">Komponentgalleri</a>
+                        <a href="#contact" class="text-gray-500 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 text-sm font-medium transition-colors duration-200">Kontakt</a>
+                    </div>
+                </div>
+                
+                <!-- Dark Mode Toggle -->
+                <div class="flex items-center space-x-4">
+                    <button id="darkModeToggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200">
+                        <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    
+                    <!-- Mobile menu button -->
+                    <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobileMenu" class="md:hidden hidden">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+                    <a href="darkmodeadded.html" class="text-gray-500 dark:text-gray-300 hover:text-primary block px-3 py-2 text-base font-medium">Hjem</a>
+                    <a href="build guide.html" class="text-gray-500 dark:text-gray-300 hover:text-primary block px-3 py-2 text-base font-medium">Byggeguide</a>
+                    <a href="#components" class="text-gray-500 dark:text-gray-300 hover:text-primary block px-3 py-2 text-base font-medium">Komponentgalleri</a>
+                    <a href="#contact" class="text-gray-500 dark:text-gray-300 hover:text-primary block px-3 py-2 text-base font-medium">Kontakt</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Komponentgalleri</h1>
+            <p class="text-xl md:text-2xl mb-8 opacity-90">Utforsk og velg komponenter for din perfekte PC-bygging</p>
+            <div class="flex justify-center space-x-4">
+                <button id="clearSelectionBtn" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200">Nullstill valg</button>
+                <button id="saveListBtn" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200">Lagre liste</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid lg:grid-cols-4 gap-8">
+            <!-- Components Gallery -->
+            <div class="lg:col-span-3">
+                <!-- Filter Section -->
+                <div class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-2xl shadow-lg p-6 border border-slate-200 dark:border-gray-700 transition-all duration-300 mb-8">
+                    <h2 class="text-xl font-semibold mb-4 text-slate-800 dark:text-slate-200">Filtrer komponenter</h2>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <select id="categoryFilter" class="rounded-xl border border-slate-300 dark:border-gray-600 px-3 py-2 bg-white dark:bg-gray-700 text-slate-800 dark:text-slate-200 transition-all duration-300">
+                            <option value="">Alle kategorier</option>
+                            <option value="cpu">Prosessorer</option>
+                            <option value="gpu">Grafikkort</option>
+                            <option value="motherboard">Hovedkort</option>
+                            <option value="ram">RAM</option>
+                            <option value="storage">Lagring</option>
+                            <option value="psu">Strømforsyning</option>
+                            <option value="cooler">Kjøling</option>
+                            <option value="case">Kabinett</option>
+                        </select>
+                        <input id="searchInput" type="text" placeholder="Søk komponenter..." class="rounded-xl border border-slate-300 dark:border-gray-600 px-3 py-2 bg-white dark:bg-gray-700 text-slate-800 dark:text-slate-200 transition-all duration-300">
+                        <select id="priceFilter" class="rounded-xl border border-slate-300 dark:border-gray-600 px-3 py-2 bg-white dark:bg-gray-700 text-slate-800 dark:text-slate-200 transition-all duration-300">
+                            <option value="">Alle priser</option>
+                            <option value="0-500">Under 500 NOK</option>
+                            <option value="500-1000">500-1000 NOK</option>
+                            <option value="1000-2000">1000-2000 NOK</option>
+                            <option value="2000+">Over 2000 NOK</option>
+                        </select>
+                        <select id="sortFilter" class="rounded-xl border border-slate-300 dark:border-gray-600 px-3 py-2 bg-white dark:bg-gray-700 text-slate-800 dark:text-slate-200 transition-all duration-300">
+                            <option value="name">Sorter etter navn</option>
+                            <option value="price-low">Pris: Lav til høy</option>
+                            <option value="price-high">Pris: Høy til lav</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Components Grid -->
+                <div id="componentsGrid" class="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+                    <!-- Components will be loaded here -->
+                </div>
+            </div>
+
+            <!-- Selected Components Sidebar -->
+            <div class="lg:col-span-1">
+                <div class="selected-list bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-2xl shadow-lg p-6 border border-slate-200 dark:border-gray-700 transition-all duration-300">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-semibold text-slate-800 dark:text-slate-200">Valgte komponenter</h3>
+                        <span id="selectedCount" class="px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300 text-sm font-medium">0</span>
+                    </div>
+                    <div id="selectedComponents" class="space-y-3 mb-6">
+                        <p class="text-slate-600 dark:text-slate-400 text-center py-8">Ingen komponenter valgt ennå</p>
+                    </div>
+                    <div class="border-t border-slate-200 dark:border-gray-700 pt-4">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="font-semibold text-slate-800 dark:text-slate-200">Total pris:</span>
+                            <span id="totalPrice" class="font-bold text-lg text-blue-600 dark:text-blue-400">0 NOK</span>
+                        </div>
+                        <div class="space-y-2">
+                            <button id="exportJsonBtn" class="w-full px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors duration-200">Eksporter JSON</button>
+                            <button id="shareListBtn" class="w-full px-4 py-2 rounded-lg bg-green-600 hover:bg-green-700 text-white font-medium transition-colors duration-200">Del liste</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 dark:bg-gray-900 text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Johan's PC Verden</h3>
+                    <p class="text-gray-400">Din guide til perfekte PC-byggeprosjekter</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Navigasjon</h4>
+                    <ul class="space-y-2">
+                        <li><a href="darkmodeadded.html" class="text-gray-400 hover:text-white transition-colors duration-200">Hjem</a></li>
+                        <li><a href="build guide.html" class="text-gray-400 hover:text-white transition-colors duration-200">Byggeguide</a></li>
+                        <li><a href="komponentgalleri.html" class="text-gray-400 hover:text-white transition-colors duration-200">Komponentgalleri</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Komponenter</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">Prosessorer</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">Grafikkort</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">Hovedkort</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">RAM</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Kontakt</h4>
+                    <p class="text-gray-400 mb-2"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4b2124232a250b3b283d2e392f2e25652524">[email&#160;protected]</a></p>
+                    <p class="text-gray-400">+47 123 45 678</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; foot.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Dark mode functionality
+        function initDarkMode() {
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const html = document.documentElement;
+            
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            
+            if (currentTheme === 'dark') {
+                html.classList.add('dark');
+            }
+            
+            darkModeToggle.addEventListener('click', () => {
+                html.classList.toggle('dark');
+                const theme = html.classList.contains('dark') ? 'dark' : 'light';
+                localStorage.setItem('theme', theme);
+            });
+        }
+
+        // Mobile menu functionality
+        function initMobileMenu() {
+            const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (mobileMenuToggle && mobileMenu) {
+                mobileMenuToggle.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        }
+
+        // Slideshow functionality
+        function createSlideshow(images, containerId) {
+            if (!images || images.length === 0) return '';
+            
+            const validImages = images.filter(img => img && img.trim() !== '');
+            if (validImages.length === 0) return '';
+            
+            const slideshowId = `slideshow-${Math.random().toString(36).substr(2, 9)}`;
+            
+            let slideshowHTML = `
+                <div class="component-slideshow" id="${slideshowId}">
+                    <div class="slideshow-container">
+                        ${validImages.map((img, index) => `
+                            <img src="${img}" alt="Component image ${index + 1}" class="slide-image" style="display: ${index === 0 ? 'block' : 'none'};" />
+                        `).join('')}
+                    </div>
+            `;
+            
+            if (validImages.length > 1) {
+                slideshowHTML += `
+                    <button class="nav-arrow prev" onclick="changeSlide('${slideshowId}', -1)">‹</button>
+                    <button class="nav-arrow next" onclick="changeSlide('${slideshowId}', 1)">›</button>
+                    <div class="slide-indicators">
+                        ${validImages.map((_, index) => `
+                            <div class="indicator ${index === 0 ? 'active' : ''}" onclick="currentSlide('${slideshowId}', ${index})"></div>
+                        `).join('')}
+                    </div>
+                `;
+            }
+            
+            slideshowHTML += '</div>';
+            return slideshowHTML;
+        }
+
+        window.slideIndices = {};
+
+        window.changeSlide = function(slideshowId, direction) {
+            const slideshow = document.getElementById(slideshowId);
+            if (!slideshow) return;
+            
+            const slides = slideshow.querySelectorAll('.slide-image');
+            const indicators = slideshow.querySelectorAll('.indicator');
+            
+            if (!window.slideIndices[slideshowId]) {
+                window.slideIndices[slideshowId] = 0;
+            }
+            
+            slides[window.slideIndices[slideshowId]].style.display = 'none';
+            if (indicators.length > 0) {
+                indicators[window.slideIndices[slideshowId]].classList.remove('active');
+            }
+            
+            window.slideIndices[slideshowId] += direction;
+            if (window.slideIndices[slideshowId] >= slides.length) {
+                window.slideIndices[slideshowId] = 0;
+            }
+            if (window.slideIndices[slideshowId] < 0) {
+                window.slideIndices[slideshowId] = slides.length - 1;
+            }
+            
+            slides[window.slideIndices[slideshowId]].style.display = 'block';
+            if (indicators.length > 0) {
+                indicators[window.slideIndices[slideshowId]].classList.add('active');
+            }
+        };
+
+        window.currentSlide = function(slideshowId, index) {
+            const slideshow = document.getElementById(slideshowId);
+            if (!slideshow) return;
+            
+            const slides = slideshow.querySelectorAll('.slide-image');
+            const indicators = slideshow.querySelectorAll('.indicator');
+            
+            if (window.slideIndices[slideshowId] !== undefined) {
+                slides[window.slideIndices[slideshowId]].style.display = 'none';
+                if (indicators.length > 0) {
+                    indicators[window.slideIndices[slideshowId]].classList.remove('active');
+                }
+            }
+            
+            window.slideIndices[slideshowId] = index;
+            slides[index].style.display = 'block';
+            if (indicators.length > 0) {
+                indicators[index].classList.add('active');
+            }
+        };
+
+        // Component data loading
+        const FILES = [
+            "gpusingel.js",
+            "casesingel.js", 
+            "coolersingel.js",
+            "ramsingel.js",
+            "psusingel.js",
+            "cpusingel.js",
+            "motherboards.js",
+            "storgesingel.js"
+        ];
+
+        function candidatesFor(name) {
+            const htmlPath = window.location.pathname;
+            const htmlDir = htmlPath.endsWith("/") ? htmlPath : htmlPath.substring(0, htmlPath.lastIndexOf("/") + 1);
+            const set = new Set();
+            set.add(htmlDir + name);
+            if (!htmlDir.endsWith("/uploads/")) set.add("/uploads/" + name);
+            set.add(name);
+            return Array.from(set);
+        }
+
+        function loadOne(name) {
+            const paths = candidatesFor(name);
+            let i = 0;
+            return new Promise((resolve, reject) => {
+                function tryNext() {
+                    if (i >= paths.length) return reject(new Error("Failed to load " + name));
+                    const s = document.createElement("script");
+                    s.src = paths[i++];
+                    s.async = false;
+                    s.onload = () => resolve({ name, src: s.src });
+                    s.onerror = () => { s.remove(); tryNext(); };
+                    document.head.appendChild(s);
+                }
+                tryNext();
+            });
+        }
+
+        async function loadAll() {
+            const results = await Promise.allSettled(FILES.map(loadOne));
+            const ok = [];
+            const missing = [];
+            results.forEach((r, idx) => {
+                if (r.status === "fulfilled") ok.push(r.value);
+                else missing.push(FILES[idx]);
+            });
+            window.__loadedFiles = ok;
+            window.__missingFiles = missing;
+        }
+
+        // Component gallery functionality
+        let allComponents = [];
+        let selectedComponents = new Map();
+        let filteredComponents = [];
+
+        function initComponentGallery() {
+            // Collect all components from loaded data
+            const CATALOG = {
+                cpu: (() => {
+                    if (typeof cpus !== "undefined" && Array.isArray(cpus)) return cpus;
+                    if (typeof cpu !== "undefined" && Array.isArray(cpu)) return cpu;
+                    if (typeof CPUs !== "undefined" && Array.isArray(CPUs)) return CPUs;
+                    if (typeof CPU !== "undefined" && Array.isArray(CPU)) return CPU;
+                    if (typeof processors !== "undefined" && Array.isArray(processors)) return processors;
+                    if (typeof cpuList !== "undefined" && Array.isArray(cpuList)) return cpuList;
+                    if (typeof cpu_list !== "undefined" && Array.isArray(cpu_list)) return cpu_list;
+                    if (typeof cpuData !== "undefined" && Array.isArray(cpuData)) return cpuData;
+                    return [];
+                })(),
+                gpu: (() => {
+                    if (typeof gpu !== "undefined" && Array.isArray(gpu)) return gpu;
+                    if (typeof gpus !== "undefined" && Array.isArray(gpus)) return gpus;
+                    if (typeof GPUs !== "undefined" && Array.isArray(GPUs)) return GPUs;
+                    if (typeof graphicsCards !== "undefined" && Array.isArray(graphicsCards)) return graphicsCards;
+                    if (typeof videoCards !== "undefined" && Array.isArray(videoCards)) return videoCards;
+                    return [];
+                })(),
+                case: (() => {
+                    if (typeof pcCases !== "undefined" && Array.isArray(pcCases)) return pcCases;
+                    if (typeof cases !== "undefined" && Array.isArray(cases)) return cases;
+                    if (typeof caseList !== "undefined" && Array.isArray(caseList)) return caseList;
+                    return [];
+                })(),
+                cooler: (() => {
+                    if (typeof cpuCoolers !== "undefined" && Array.isArray(cpuCoolers)) return cpuCoolers;
+                    if (typeof coolers !== "undefined" && Array.isArray(coolers)) return coolers;
+                    if (typeof airCoolers !== "undefined" && Array.isArray(airCoolers)) return airCoolers;
+                    if (typeof aioCoolers !== "undefined" && Array.isArray(aioCoolers)) return aioCoolers;
+                    return [];
+                })(),
+                ram: (() => {
+                    if (typeof ram !== "undefined" && Array.isArray(ram)) return ram;
+                    if (typeof rams !== "undefined" && Array.isArray(rams)) return rams;
+                    if (typeof memory !== "undefined" && Array.isArray(memory)) return memory;
+                    if (typeof ddr !== "undefined" && Array.isArray(ddr)) return ddr;
+                    return [];
+                })(),
+                storage: (() => {
+                    if (typeof storage !== "undefined" && Array.isArray(storage)) return storage;
+                    if (typeof storages !== "undefined" && Array.isArray(storages)) return storages;
+                    if (typeof drives !== "undefined" && Array.isArray(drives)) return drives;
+                    if (typeof nvme !== "undefined" && Array.isArray(nvme)) return nvme;
+                    return [];
+                })(),
+                psu: (() => {
+                    if (typeof psu !== "undefined" && Array.isArray(psu)) return psu;
+                    if (typeof psus !== "undefined" && Array.isArray(psus)) return psus;
+                    if (typeof powerSupplies !== "undefined" && Array.isArray(powerSupplies)) return powerSupplies;
+                    return [];
+                })(),
+                motherboard: (() => {
+                    if (typeof motherboards !== "undefined" && Array.isArray(motherboards)) return motherboards;
+                    if (typeof motherboard !== "undefined" && Array.isArray(motherboard)) return motherboard;
+                    if (typeof mobo !== "undefined" && Array.isArray(mobo)) return mobo;
+                    if (typeof mobos !== "undefined" && Array.isArray(mobos)) return mobos;
+                    if (typeof boards !== "undefined" && Array.isArray(boards)) return boards;
+                    if (typeof moboList !== "undefined" && Array.isArray(moboList)) return moboList;
+                    if (typeof motherBoardList !== "undefined" && Array.isArray(motherBoardList)) return motherBoardList;
+                    return [];
+                })()
+            };
+
+            // Flatten all components with category info
+            allComponents = [];
+            Object.entries(CATALOG).forEach(([category, components]) => {
+                components.forEach(component => {
+                    allComponents.push({
+                        ...component,
+                        category: category,
+                        id: `${category}-${component.name || Math.random()}`
+                    });
+                });
+            });
+
+            filteredComponents = [...allComponents];
+            renderComponents();
+            setupFilters();
+            setupActions();
+        }
+
+        function renderComponents() {
+            const grid = document.getElementById('componentsGrid');
+            if (!grid) return;
+
+            if (filteredComponents.length === 0) {
+                grid.innerHTML = '<div class="col-span-full text-center py-12 text-slate-600 dark:text-slate-400">Ingen komponenter funnet</div>';
+                return;
+            }
+
+            grid.innerHTML = filteredComponents.map(component => {
+                const images = [];
+                if (component.image) images.push(component.image);
+                if (component.imageUrl) images.push(component.imageUrl);
+                if (component.images && Array.isArray(component.images)) {
+                    images.push(...component.images);
+                }
+
+                const slideshowHTML = createSlideshow(images, `card-${component.id}`);
+                const isSelected = selectedComponents.has(component.id);
+
+                return `
+                    <div class="component-card fade-in-up ${isSelected ? 'selected' : ''}" data-component-id="${component.id}">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="flex-1">
+                                <div class="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wide mb-1">${getCategoryName(component.category)}</div>
+                                <div class="font-semibold text-slate-800 dark:text-slate-200">${component.name}</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="font-bold text-lg text-blue-600 dark:text-blue-400">${component.price} NOK</div>
+                                <button class="select-btn mt-1 px-3 py-1 rounded-lg text-xs font-medium transition-colors duration-200 ${isSelected ? 'bg-green-600 text-white' : 'bg-slate-200 dark:bg-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-500'}">
+                                    ${isSelected ? 'Valgt ✓' : 'Velg'}
+                                </button>
+                            </div>
+                        </div>
+                        ${slideshowHTML}
+                        <div class="mt-3">
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">${component.info || ''}</p>
+                            ${component.url ? `<a href="${component.url}" target="_blank" rel="noopener" class="mt-2 inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 text-sm font-medium transition-colors duration-300">
+                                Se produkt
+                                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>` : ''}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            // Add click handlers for selection
+            grid.querySelectorAll('.component-card').forEach(card => {
+                const componentId = card.dataset.componentId;
+                const selectBtn = card.querySelector('.select-btn');
+                
+                selectBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleComponentSelection(componentId);
+                });
+            });
+        }
+
+        function getCategoryName(category) {
+            const categoryNames = {
+                cpu: 'Prosessor',
+                gpu: 'Grafikkort',
+                motherboard: 'Hovedkort',
+                ram: 'RAM',
+                storage: 'Lagring',
+                psu: 'Strømforsyning',
+                cooler: 'Kjøling',
+                case: 'Kabinett'
+            };
+            return categoryNames[category] || category;
+        }
+
+        function toggleComponentSelection(componentId) {
+            const component = allComponents.find(c => c.id === componentId);
+            if (!component) return;
+
+            if (selectedComponents.has(componentId)) {
+                selectedComponents.delete(componentId);
+            } else {
+                selectedComponents.set(componentId, component);
+            }
+
+            renderComponents();
+            updateSelectedList();
+        }
+
+        function updateSelectedList() {
+            const selectedDiv = document.getElementById('selectedComponents');
+            const countSpan = document.getElementById('selectedCount');
+            const totalSpan = document.getElementById('totalPrice');
+
+            const selected = Array.from(selectedComponents.values());
+            countSpan.textContent = selected.length;
+
+            if (selected.length === 0) {
+                selectedDiv.innerHTML = '<p class="text-slate-600 dark:text-slate-400 text-center py-8">Ingen komponenter valgt ennå</p>';
+                totalSpan.textContent = '0 NOK';
+                return;
+            }
+
+            const total = selected.reduce((sum, comp) => sum + (comp.price || 0), 0);
+            totalSpan.textContent = `${total} NOK`;
+
+            selectedDiv.innerHTML = selected.map(component => `
+                <div class="flex items-center justify-between p-3 bg-slate-100 dark:bg-slate-700 rounded-lg">
+                    <div class="flex-1">
+                        <div class="text-xs text-slate-500 dark:text-slate-400 uppercase">${getCategoryName(component.category)}</div>
+                        <div class="font-medium text-slate-800 dark:text-slate-200 text-sm">${component.name}</div>
+                        <div class="text-xs text-blue-600 dark:text-blue-400">${component.price} NOK</div>
+                    </div>
+                    <button onclick="toggleComponentSelection('${component.id}')" class="text-red-500 hover:text-red-700 p-1">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        function setupFilters() {
+            const categoryFilter = document.getElementById('categoryFilter');
+            const searchInput = document.getElementById('searchInput');
+            const priceFilter = document.getElementById('priceFilter');
+            const sortFilter = document.getElementById('sortFilter');
+
+            function applyFilters() {
+                filteredComponents = allComponents.filter(component => {
+                    // Category filter
+                    if (categoryFilter.value && component.category !== categoryFilter.value) {
+                        return false;
+                    }
+
+                    // Search filter
+                    if (searchInput.value) {
+                        const search = searchInput.value.toLowerCase();
+                        if (!component.name.toLowerCase().includes(search) && 
+                            !(component.info || '').toLowerCase().includes(search)) {
+                            return false;
+                        }
+                    }
+
+                    // Price filter
+                    if (priceFilter.value) {
+                        const price = component.price || 0;
+                        const [min, max] = priceFilter.value.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+                        if (max !== undefined && (price < min || price > max)) {
+                            return false;
+                        } else if (max === undefined && price < min) {
+                            return false;
+                        }
+                    }
+
+                    return true;
+                });
+
+                // Apply sorting
+                if (sortFilter.value === 'price-low') {
+                    filteredComponents.sort((a, b) => (a.price || 0) - (b.price || 0));
+                } else if (sortFilter.value === 'price-high') {
+                    filteredComponents.sort((a, b) => (b.price || 0) - (a.price || 0));
+                } else {
+                    filteredComponents.sort((a, b) => a.name.localeCompare(b.name));
+                }
+
+                renderComponents();
+            }
+
+            categoryFilter.addEventListener('change', applyFilters);
+            searchInput.addEventListener('input', applyFilters);
+            priceFilter.addEventListener('change', applyFilters);
+            sortFilter.addEventListener('change', applyFilters);
+        }
+
+        function setupActions() {
+            // Clear selection
+            document.getElementById('clearSelectionBtn').addEventListener('click', () => {
+                selectedComponents.clear();
+                renderComponents();
+                updateSelectedList();
+            });
+
+            // Save list
+            document.getElementById('saveListBtn').addEventListener('click', () => {
+                const selected = Array.from(selectedComponents.values());
+                if (selected.length === 0) {
+                    alert('Ingen komponenter valgt å lagre!');
+                    return;
+                }
+                
+                const listName = prompt('Gi listen et navn:');
+                if (listName) {
+                    const savedLists = JSON.parse(localStorage.getItem('savedComponentLists') || '[]');
+                    savedLists.push({
+                        name: listName,
+                        components: selected,
+                        date: new Date().toISOString(),
+                        total: selected.reduce((sum, comp) => sum + (comp.price || 0), 0)
+                    });
+                    localStorage.setItem('savedComponentLists', JSON.stringify(savedLists));
+                    alert(`Listen "${listName}" er lagret!`);
+                }
+            });
+
+            // Export JSON
+            document.getElementById('exportJsonBtn').addEventListener('click', () => {
+                const selected = Array.from(selectedComponents.values());
+                if (selected.length === 0) {
+                    alert('Ingen komponenter å eksportere!');
+                    return;
+                }
+
+                const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(selected, null, 2));
+                const dl = document.createElement("a");
+                dl.setAttribute("href", dataStr);
+                dl.setAttribute("download", "komponenter.json");
+                dl.click();
+            });
+
+            // Share list
+            document.getElementById('shareListBtn').addEventListener('click', () => {
+                const selected = Array.from(selectedComponents.values());
+                if (selected.length === 0) {
+                    alert('Ingen komponenter å dele!');
+                    return;
+                }
+
+                const shareText = `Min PC-komponentliste fra Johan's PC Verden:\n\n${selected.map(c => `${getCategoryName(c.category)}: ${c.name} - ${c.price} NOK`).join('\n')}\n\nTotal: ${selected.reduce((sum, comp) => sum + (comp.price || 0), 0)} NOK`;
+                
+                if (navigator.share) {
+                    navigator.share({
+                        title: 'Min PC-komponentliste',
+                        text: shareText
+                    });
+                } else {
+                    navigator.clipboard.writeText(shareText).then(() => {
+                        alert('Listen er kopiert til utklippstavlen!');
+                    });
+                }
+            });
+        }
+
+        // Start the app
+        function startApp() {
+            initDarkMode();
+            initMobileMenu();
+            initComponentGallery();
+        }
+
+        window.addEventListener("DOMContentLoaded", () => {
+            loadAll().finally(startApp);
+        });
+    </script>
+</body>
+</html>
