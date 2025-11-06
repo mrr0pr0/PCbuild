@@ -8,7 +8,7 @@
     formFactor: 'ATX',
     tier: 'premium',
     bestFor: 'High-end gaming and aesthetic builds',
-    image: './imgas/Case/nzxt-h6-flow-rgb-black.jpg'
+    image: 'https://res.cloudinary.com/dxeuo6xas/image/upload/v1762417969/nzxt-h6-flow-rgb-black_dzqsfo.jpg'
   },
   {
     id: 'nzxt-h6-flow-black',
@@ -19,7 +19,7 @@
     formFactor: 'ATX',
     tier: 'mid-range',
     bestFor: 'Clean and functional builds',
-    image: './imgas/Case/nzxt-h6-flow-black.jpg'
+    image: '.https://res.cloudinary.com/dxeuo6xas/image/upload/v1762417967/nzxt-h6-flow-black_qlnowd.jpg'
   },
   {
     id: 'nzxt-h6-flow-white',
@@ -30,7 +30,7 @@
     formFactor: 'ATX',
     tier: 'mid-range',
     bestFor: 'Clean-looking builds',
-    image: './imgas/Case/nzxt-h6-flow-white.jpg'
+    image: '.https://res.cloudinary.com/dxeuo6xas/image/upload/v1762417976/nzxt-h6-flow-white_huhg2r.jpg'
   },
   {
     id: 'nzxt-h6-flow-rgb-white',
@@ -41,7 +41,7 @@
     formFactor: 'ATX',
     tier: 'premium',
     bestFor: 'RGB-focused gaming builds',
-    image: './imgas/Case/nzxt-h6-flow-rgb-white.jpg'
+    image: '.https://res.cloudinary.com/dxeuo6xas/image/upload/v1762417973/nzxt-h6-flow-rgb-white_yr78dd.jpg'
   },
   {
     id: 'phanteks-evolv-x2-black',
@@ -52,7 +52,7 @@
     formFactor: 'ATX',
     tier: 'high-end',
     bestFor: 'High-performance builds',
-    image: './imgas/Case/phanteks-evolv-x2-black.jpg'
+    image: '.https://res.cloudinary.com/dxeuo6xas/image/upload/v1762417978/phanteks-evolv-x2-black_mgf4ig.jpg'
   },
   {
     id: 'phanteks-evolv-x2-white',
@@ -63,7 +63,7 @@
     formFactor: 'ATX',
     tier: 'high-end',
     bestFor: 'Aesthetic high-performance builds',
-    image: './imgas/Case/phanteks-evolv-x2-white.jpg'
+    image: '.https://res.cloudinary.com/dxeuo6xas/image/upload/v1762417980/phanteks-evolv-x2-white_daenhs.jpg'
   },
   {
     id: 'asus-tuf-gt301-rgb',
@@ -74,7 +74,7 @@
     formFactor: 'ATX',
     tier: 'mid-range',
     bestFor: 'Gaming builds with RGB focus',
-    image: './imgas/Case/asus-tuf-gt301-rgb.jpg'
+    image: '.https://res.cloudinary.com/dxeuo6xas/image/upload/v1762417948/asus-tuf-gt301-rgb_dfg2ae.jpg'
   },
 
 
@@ -87,7 +87,7 @@
     formFactor: 'ATX',
     tier: 'premium',
     bestFor: 'Extreme cooling and component clearance',
-    image: './imgas/Case/phanteks-xt-pro-ultra-white.jpg'
+    image: '.https://res.cloudinary.com/dxeuo6xas/image/upload/v1762417985/phanteks-xt-pro-ultra-white_kbklhd.jpg'
   },
   {
     id: 'phanteks-xt-view-black',
@@ -98,7 +98,7 @@
     formFactor: 'ATX',
     tier: 'mid-range',
     bestFor: 'Showcasing components with style',
-    image: './imgas/Case/phanteks-xt-view-black.jpg'
+    image: '.https://res.cloudinary.com/dxeuo6xas/image/upload/v1762417987/phanteks-xt-view-black_yiuzhy.jpg'
   },
   {
     id: 'phanteks-xt-view-white',
@@ -109,7 +109,7 @@
     formFactor: 'ATX',
     tier: 'mid-range',
     bestFor: 'Showcasing components with style',
-    image: './imgas/Case/phanteks-evolv-x2-white.jpg'
+    image: '.https://res.cloudinary.com/dxeuo6xas/image/upload/v1762417990/phanteks-xt-view-white_wotkpu.jpg'
   },
   {
     id: 'corsair-4000d-airflow-white',
@@ -120,7 +120,7 @@
     formFactor: 'ATX',
     tier: 'budget',
     bestFor: 'Value builds with good cooling',
-    image: './imgas/Case/corsair-4000d-airflow-white.jpg'
+    image: '.https://res.cloudinary.com/dxeuo6xas/image/upload/v1762417952/corsair-4000d-airflow-white_vyrng5.jpg'
   },
   {
     id: 'fractal-design-north-xl-black',
@@ -131,7 +131,7 @@
     formFactor: 'ATX',
     tier: 'high-end',
     bestFor: 'Premium builds with a focus on airflow',
-    image: './imgas/Case/fractal-design-north-xl-black.jpg'
+    image: '.https://res.cloudinary.com/dxeuo6xas/image/upload/v1762417954/fractal-design-north-xl-black_c4g14w.jpg'
   },
   {
     id: 'fractal-design-north-xl-tg-clear-white',
@@ -142,7 +142,7 @@
     formFactor: 'ATX',
     tier: 'high-end',
     bestFor: 'Premium builds with a focus on airflow',
-    image: './imgas/Case/fractal-design-north-xl-tg-clear-white.jpg'
+    image: '.https://res.cloudinary.com/dxeuo6xas/image/upload/v1762417956/fractal-design-north-xl-tg-clear-white_lj9v9j.jpg'
   },
   {
     id: 'lian-li-o11d-evo-rgb-black',
@@ -153,7 +153,7 @@
     formFactor: 'ATX',
     tier: 'high-end',
     bestFor: 'High-performance builds with RGB focus',
-    image: './imgas/Case/lian-li-o11d-evo-rgb-black.jpg'
+    image: '.https://res.cloudinary.com/dxeuo6xas/image/upload/v1762417964/lian-li-o11d-evo-rgb-black_d2wpkc.jpg'
   },
     {
     id: 'fractal-meshify-3-tg-black',
@@ -164,7 +164,7 @@
     formFactor: 'ATX',
     tier: 'high-end',
     bestFor: 'Airflow-focused gaming builds',
-    image: './imgas/Case/fractal-meshify-3-tg-black.jpg'
+    image: '.https://res.cloudinary.com/dxeuo6xas/image/upload/v1762417950/asus-tuf-gt501-midi-tower_kkb68b.jpg'
   },
   {
     id: 'fractal-meshify-3-xl-solid-black',
@@ -175,7 +175,7 @@
     formFactor: 'ATX',
     tier: 'high-end',
     bestFor: 'High-performance builds needing space and cooling',
-    image: 'https://www.komplett.no/img/p/1311/1311562_1.jpg'
+    image: ''
   },
   {
     id: 'fractal-meshify-3-xl-ambience-rgb-black',
@@ -186,7 +186,7 @@
     formFactor: 'ATX',
     tier: 'premium',
     bestFor: 'RGB-heavy high-end builds',
-    image: './imgas/Case/fractal-meshify-3-xl-ambience-rgb-black.jpg'
+    image: '.https://res.cloudinary.com/dxeuo6xas/image/upload/v1762417962/fractal-meshify-3-xl-ambience-rgb-black_vmjt2b.jpg'
   },
   {
     id: 'asus-proart-pa401-wood-metal-black',
@@ -197,7 +197,7 @@
     formFactor: 'ATX',
     tier: 'mid-range',
     bestFor: 'Creative workstations and aesthetic builds',
-    image: './imgas/Case/asus-proart-pa401-wood-metal-black.jpg'
+    image: '.https://res.cloudinary.com/dxeuo6xas/image/upload/v1762417946/asus-proart-pa401-wood-metal-black_hl6cm4.jpg'
   },
 
   {
@@ -209,7 +209,7 @@
     formFactor: 'ATX',
     tier: 'mid-range',
     bestFor: 'Workstation and content creation builds',
-    image: './imgas/Case/asus-proart-pa401-black.jpg'
+    image: '.https://res.cloudinary.com/dxeuo6xas/image/upload/v1762417945/asus-proart-pa401-black_xkozr0.jpg'
   },
   {
     id: 'fractal-meshify-3-rgb-tg-light-tint-black',
@@ -242,7 +242,7 @@
     formFactor: 'ATX',
     tier: 'high-end',
     bestFor: 'Durable gaming builds with expandability',
-    image: './imgas/Case/asus-tuf-gt501-midi-tower.jpg'
+    image: '.https://res.cloudinary.com/dxeuo6xas/image/upload/v1762417950/asus-tuf-gt501-midi-tower_kkb68b.jpg'
   }
 ];
 
