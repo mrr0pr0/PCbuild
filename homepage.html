@@ -399,64 +399,75 @@
 </head>
 
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
-  <!-- Header: replaced with Tailwind-only semantic markup and a switch-style dark-mode input -->
-  <header class="max-w-4xl mx-auto px-4 sm:px-6 py-4 relative">
-    <div class="flex items-center justify-between">
-      <!-- Left: round logo -->
-      <div class="flex items-center gap-4">
-        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-indigo-600 flex items-center justify-center text-white font-bold">L</div>
+  <!-- Navigation Header -->
+  <nav class="bg-white dark:bg-gray-800 shadow-lg sticky top-0 z-50 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <div class="flex-shrink-0">
+            <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text">Build Guide</h1>
+          </div>
+          <div class="hidden md:ml-6 md:flex md:space-x-8">
+            <a href="/homepage.html" class="text-blue-600 border-b-2 border-blue-600 px-3 py-2 text-sm font-medium">Home</a>
+            <a href="/html/build%20guide.html" class="text-gray-500 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors duration-200">Build Guide</a>
+            <a href="/html/komponentgalleri.html" class="text-gray-500 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 px-3 py-2 text-sm font-medium transition-colors duration-200">Components</a>
+          </div>
+        </div>
+        
+        <div class="flex items-center space-x-4">
+          <button id="darkModeToggle" class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200">
+            <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+          
+          <button id="mobileMenuToggle" class="md:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:text-blue-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
       </div>
-
-      <!-- Center: title (absolutely centered so controls and right logo don't affect it) -->
-      <div class="absolute left-1/2 transform -translate-x-1/2 pointer-events-none text-center">
-        <div class="text-sm text-gray-500 dark:text-gray-400">Logo</div>
-        <div class="text-xl md:text-2xl font-extrabold text-gray-900 dark:text-white">Build Guide</div>
-      </div>
-
-      <!-- Right: controls (toggle + Export + Reset) -->
-      <div class="flex items-center gap-3 md:gap-4">
-        <!-- Switch-style dark mode toggle with sun & moon icons.
-             Input moved inside the label so :checked and clicks behave consistently. -->
-        <label for="themeToggle" class="inline-flex items-center gap-3 cursor-pointer select-none">
-          <!-- Sun icon -->
-          <svg class="w-4 h-4 text-yellow-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2m0 14v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2m18 0h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42M12 7a5 5 0 100 10 5 5 0 000-10z"/>
-          </svg>
-
-          <span class="relative inline-block w-11 h-6">
-            <!-- hidden checkbox remains accessible -->
-            <input id="themeToggle" type="checkbox" class="sr-only" aria-label="Toggle dark mode" />
-            <!-- track -->
-            <span id="themeTrack" class="absolute inset-0 block rounded-full bg-gray-200 dark:bg-gray-700 transition-colors duration-200"></span>
-            <!-- thumb -->
-            <span id="themeThumb" class="absolute left-0 top-0.5 w-4 h-4 bg-white rounded-full shadow transform transition-transform duration-200"></span>
-          </span>
-
-          <!-- Moon icon -->
-          <svg class="w-4 h-4 text-gray-500 dark:text-yellow-300" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
-          </svg>
-        </label>
-
-        <button id="exportBtn" class="px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm font-medium hover:shadow transition-shadow duration-150">
-          Export JSON
-        </button>
-
-        <button id="resetBtn" class="px-3 py-2 rounded-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm font-medium hover:shadow transition-shadow duration-150">
-          Reset
-        </button>
+      
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="md:hidden hidden">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700">
+          <a href="/homepage.html" class="text-blue-600 block px-3 py-2 text-base font-medium">Home</a>
+          <a href="/html/build%20guide.html" class="text-gray-500 dark:text-gray-300 hover:text-blue-600 block px-3 py-2 text-base font-medium">Build Guide</a>
+          <a href="/html/komponentgalleri.html" class="text-gray-500 dark:text-gray-300 hover:text-blue-600 block px-3 py-2 text-base font-medium">Components</a>
+        </div>
       </div>
     </div>
+  </nav>
 
-    <!-- divider -->
-    <div class="header-divider"></div>
-
-    <!-- Search bubble centered below divider with explicit breathing room and widened width -->
-    <div class="search-row">
-      <div id="searchBubble" class="top-oval">
-        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"/></svg>
-        <span class="text-sm text-gray-600 dark:text-gray-200">search</span>
+  <!-- Search Section -->
+  <div class="bg-gray-50 dark:bg-gray-900 py-6">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="relative">
+        <input 
+          id="searchInput" 
+          type="text" 
+          placeholder="Search components..." 
+          class="w-full px-6 py-3 pl-12 rounded-full border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all duration-200"
+        />
+        <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z"/>
+        </svg>
       </div>
+    </div>
+  </div>
+  
+  <header class="max-w-4xl mx-auto px-4 sm:px-6 py-4 relative">
+    <div class="flex items-center justify-end gap-3">
+      <button id="exportBtn" class="px-4 py-2 rounded-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm font-medium hover:shadow transition-shadow duration-150">
+        Export JSON
+      </button>
+      <button id="resetBtn" class="px-4 py-2 rounded-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-sm font-medium hover:shadow transition-shadow duration-150">
+        Reset
+      </button>
     </div>
   </header>
 
@@ -514,60 +525,66 @@
 
   <!-- Existing scripts and loader + UI logic (unchanged except for dark-mode initialization hooking into the switch) -->
   <script>
-    // Dark mode functionality (wired to the switch-style checkbox #themeToggle)
+    // Dark mode functionality
     function initDarkMode() {
-      const toggle = document.getElementById('themeToggle');
+      const darkModeToggle = document.getElementById('darkModeToggle');
       const html = document.documentElement;
-      const stored = localStorage.getItem('theme');
-
-      // initialize from localStorage
-      if (stored === 'dark') {
+      
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      
+      if (currentTheme === 'dark') {
         html.classList.add('dark');
-        if (toggle) toggle.checked = true;
-      } else if (stored === 'light') {
-        html.classList.remove('dark');
-        if (toggle) toggle.checked = false;
-      } else {
-        // no stored value: respect system preference
-        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (prefersDark) {
-          html.classList.add('dark');
-          if (toggle) toggle.checked = true;
-        } else {
-          html.classList.remove('dark');
-          if (toggle) toggle.checked = false;
-        }
       }
-
-      // Update visual position of thumb/track via classes on change (kept simple via inline transforms)
-      function refreshSwitchVisual() {
-        const track = document.getElementById('themeTrack');
-        const thumb = document.getElementById('themeThumb');
-        if (!track || !thumb || !toggle) return;
-        if (toggle.checked) {
-          track.classList.remove('bg-gray-200');
-          track.classList.add('bg-indigo-500');
-          thumb.style.transform = 'translateX(20px)';
-        } else {
-          track.classList.remove('bg-indigo-500');
-          track.classList.add('bg-gray-200');
-          thumb.style.transform = '';
-        }
-      }
-      refreshSwitchVisual();
-
-      if (toggle) {
-        toggle.addEventListener('change', () => {
-          if (toggle.checked) {
-            html.classList.add('dark');
-            localStorage.setItem('theme', 'dark');
-          } else {
-            html.classList.remove('dark');
-            localStorage.setItem('theme', 'light');
-          }
-          refreshSwitchVisual();
+      
+      if (darkModeToggle) {
+        darkModeToggle.addEventListener('click', () => {
+          html.classList.toggle('dark');
+          const theme = html.classList.contains('dark') ? 'dark' : 'light';
+          localStorage.setItem('theme', theme);
         });
       }
+    }
+
+    // Mobile menu functionality
+    function initMobileMenu() {
+      const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      
+      if (mobileMenuToggle && mobileMenu) {
+        mobileMenuToggle.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    }
+
+    // Search functionality
+    function initSearch() {
+      const searchInput = document.getElementById('searchInput');
+      if (!searchInput) return;
+      
+      searchInput.addEventListener('input', (e) => {
+        const searchTerm = e.target.value.toLowerCase();
+        
+        if (searchTerm.length < 2) return;
+        
+        // Search through all component types
+        const allComponents = [];
+        if (window.cpu) allComponents.push(...window.cpu.map(c => ({...c, type: 'CPU'})));
+        if (window.gpu) allComponents.push(...window.gpu.map(c => ({...c, type: 'GPU'})));
+        if (window.motherboard) allComponents.push(...window.motherboard.map(c => ({...c, type: 'Motherboard'})));
+        if (window.ram) allComponents.push(...window.ram.map(c => ({...c, type: 'RAM'})));
+        if (window.storage) allComponents.push(...window.storage.map(c => ({...c, type: 'Storage'})));
+        if (window.psu) allComponents.push(...window.psu.map(c => ({...c, type: 'PSU'})));
+        if (window.cooler) allComponents.push(...window.cooler.map(c => ({...c, type: 'Cooler'})));
+        if (window.cases) allComponents.push(...window.cases.map(c => ({...c, type: 'Case'})));
+        
+        const results = allComponents.filter(comp => 
+          comp.name.toLowerCase().includes(searchTerm) ||
+          (comp.info && comp.info.toLowerCase().includes(searchTerm))
+        );
+        
+        console.log(`Found ${results.length} components matching "${searchTerm}"`);
+      });
     }
 
     function money(n){ return `${n} NOK`; }
@@ -829,6 +846,8 @@
 
     function startApp() {
       initDarkMode();
+      initMobileMenu();
+      initSearch();
       showLoadStatus();
 
       const CATALOG = makeCatalog();
