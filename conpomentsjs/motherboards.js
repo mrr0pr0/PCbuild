@@ -8,7 +8,7 @@ const motherboards = [
     type: 'LGA1700',
     tier: 'high-end',
     bestFor: 'Gaming and general performance builds',
-    image: './imgas/Motherboard/asus-tuf-gaming-z790-plus-wifi.jpg'
+    image: '/imgas/Motherboard/asus-tuf-gaming-z790-plus-wifi.jpg'
   },
   {
     id: 'asus-rog-strix-b550-a-gaming',
@@ -19,7 +19,7 @@ const motherboards = [
     type: 'LGA1700',
     tier: 'mid-range',
     bestFor: 'High-performance gaming builds',
-    image: './imgas/Motherboard/asus-rog-strix-b550-a-gaming.jpg'
+    image: '/imgas/Motherboard/asus-rog-strix-b550-a-gaming.jpg'
   },
   {
     id: 'asus-rog-strix-b650e-f-gaming-wifi',
@@ -30,7 +30,7 @@ const motherboards = [
     type: 'LGA1700',
     tier: 'high-end',
     bestFor: 'Gaming with high-speed connectivity',
-    image: './imgas/Motherboard/asus-rog-strix-b650e-f-gaming-wifi.jpg'
+    image: '/imgas/Motherboard/asus-rog-strix-b650e-f-gaming-wifi.jpg'
   },
   {
     id: 'asus-prime-b550m-a-wifi-ii',
@@ -41,7 +41,7 @@ const motherboards = [
     type: 'LGA1700',
     tier: 'mid-range',
     bestFor: 'Home and office builds',
-    image: './imgas/Motherboard/asus-prime-b550m-a-wifi-ii.jpg'
+    image: '/imgas/Motherboard/asus-prime-b550m-a-wifi-ii.jpg'
   },
   {
     id: 'asus-prime-b550-plus',
@@ -52,7 +52,7 @@ const motherboards = [
     type: 'AM5',
     tier: 'budget',
     bestFor: 'Budget-friendly AMD gaming builds',
-    image: './imgas/Motherboard/asus-prime-b550-plus.jpg'
+    image: '/imgas/Motherboard/asus-prime-b550-plus.jpg'
   },
   {
     id: 'asus-rog-strix-b650e-i-gaming-wifi',
@@ -63,7 +63,7 @@ const motherboards = [
     type: 'AM5',
     tier: 'high-end',
     bestFor: 'High-end AMD gaming builds',
-    image: './imgas/Motherboard/asus-rog-strix-b650e-i-gaming-wifi.jpg'
+    image: '/imgas/Motherboard/asus-rog-strix-b650e-i-gaming-wifi.jpg'
   },
   {
     id: 'asus-rog-strix-x870-a-gaming-wifi-hvit',
@@ -74,7 +74,7 @@ const motherboards = [
     type: 'AM4',
     tier: 'premium',
     bestFor: 'Extreme gaming and enthusiast setups',
-    image: './imgas/Motherboard/asus-rog-strix-x870-a-gaming-wifi-hvit.jpg'
+    image: '/imgas/Motherboard/asus-rog-strix-x870-a-gaming-wifi-hvit.jpg'
   },
   {
     id: 'asus-tuf-gaming-b550m-plus-wifi-ii',
@@ -85,7 +85,7 @@ const motherboards = [
     type: 'AM4',
     tier: 'mid-range',
     bestFor: 'Reliable AMD gaming and general builds',
-    image: './imgas/Motherboard/asus-tuf-gaming-b550m-plus-wifi-ii.jpg'
+    image: '/imgas/Motherboard/asus-tuf-gaming-b550m-plus-wifi-ii.jpg'
   },
   {
     id: 'asus-tuf-gaming-b550-pro',
@@ -96,7 +96,7 @@ const motherboards = [
     type: 'AM4',
     tier: 'mid-range',
     bestFor: 'Mid-range AMD gaming builds',
-    image: './imgas/Motherboard/asus-tuf-gaming-b550-pro.jpg'
+    image: '/imgas/Motherboard/asus-tuf-gaming-b550-pro.jpg'
   },
   {
     id: 'asus-prime-b650-plus',
@@ -107,7 +107,7 @@ const motherboards = [
     type: 'LGA1200',
     tier: 'mid-range',
     bestFor: 'General purpose Intel builds',
-    image: './imgas/Motherboard/asus-prime-b650-plus.jpg'
+    image: '/imgas/Motherboard/asus-prime-b650-plus.jpg'
   },
   {
     id: 'asus-tuf-gaming-b760-plus-wifi',
@@ -118,7 +118,7 @@ const motherboards = [
     type: 'LGA1200',
     tier: 'mid-range',
     bestFor: 'Intel mid-range builds',
-    image: './imgas/Motherboard/asus-tuf-gaming-b760-plus-wifi.jpg'
+    image: '/imgas/Motherboard/asus-tuf-gaming-b760-plus-wifi.jpg'
   },
   {
     id: 'asus-tuf-gaming-b650m-plus-wifi',
@@ -129,7 +129,7 @@ const motherboards = [
     type: 'LGA1700',
     tier: 'high-end',
     bestFor: 'Compact high-performance AMD builds',
-    image: './imgas/Motherboard/asus-tuf-gaming-b650m-plus-wifi.jpg'
+    image: '/imgas/Motherboard/asus-tuf-gaming-b650m-plus-wifi.jpg'
   },
   {
     id: 'asus-rog-strix-z790-i-gaming-wifi',
@@ -140,7 +140,7 @@ const motherboards = [
     type: 'AM4',
     tier: 'premium',
     bestFor: 'High-end compact gaming builds',
-    image: './imgas/Motherboard/asus-rog-strix-z790-i-gaming-wifi.jpg'
+    image: '/imgas/Motherboard/asus-rog-strix-z790-i-gaming-wifi.jpg'
   },
   {
     id: 'asus-rog-strix-b760-i-gaming-wifi',
@@ -151,7 +151,7 @@ const motherboards = [
     type: 'AM4',
     tier: 'mid-range',
     bestFor: 'Intel mid-range gaming builds',
-    image: './imgas/Motherboard/asus-rog-strix-b760-i-gaming-wifi.jpg'
+    image: '/imgas/Motherboard/asus-rog-strix-b760-i-gaming-wifi.jpg'
   },
   {
     id: 'msi-pro-b760m-vision-d',
@@ -162,7 +162,7 @@ const motherboards = [
     type: 'LGA1700',
     tier: 'mid-range',
     bestFor: 'Intel productivity builds',
-    image: './imgas/Motherboard/msi-pro-b760m-vision-d.jpg'
+    image: '/imgas/Motherboard/msi-pro-b760m-vision-d.jpg'
   },
   {
     id: 'asus-rog-strix-b760-f-gaming-wifi',
@@ -173,7 +173,7 @@ const motherboards = [
     type: 'LGA1200',
     tier: 'high-end',
     bestFor: 'Intel high-performance gaming',
-    image: './imgas/Motherboard/asus-rog-strix-b760-f-gaming-wifi.jpg'
+    image: '/imgas/Motherboard/asus-rog-strix-b760-f-gaming-wifi.jpg'
   },
   {
     id: 'z370-pro4',
@@ -184,7 +184,7 @@ const motherboards = [
     type: 'LGA1151',
     tier: 'premium',
     bestFor: 'Extreme Intel gaming and enthusiast setups',
-    image: './imgas/Motherboard/z370-pro4.jpg'
+    image: '/imgas/Motherboard/z370-pro4.jpg'
   },
   {
     id: 'msi-b650-gaming-plus-wifi',
@@ -195,7 +195,7 @@ const motherboards = [
     type: 'LGA1200',
     tier: 'mid-range',
     bestFor: 'AMD mid-range gaming builds',
-    image: './imgas/Motherboard/msi-b650-gaming-plus-wifi.jpg'
+    image: '/imgas/Motherboard/msi-b650-gaming-plus-wifi.jpg'
   },
   {
     id: 'asus-tuf-gaming-a620m-plus-wifi',
@@ -206,7 +206,7 @@ const motherboards = [
     type: 'LGA1200',
     tier: 'mid-range',
     bestFor: 'Budget-friendly Intel builds',
-    image: './imgas/Motherboard/asus-tuf-gaming-a620m-plus-wifi.jpg'
+    image: '/imgas/Motherboard/asus-tuf-gaming-a620m-plus-wifi.jpg'
   },
   {
     id: 'msi-mag-z790-tomahawk-wifi',
@@ -217,7 +217,7 @@ const motherboards = [
     type: 'AM4',
     tier: 'high-end',
     bestFor: 'AMD high-performance builds',
-    image: './imgas/Motherboard/msi-mag-z790-tomahawk-wifi.jpg'
+    image: '/imgas/Motherboard/msi-mag-z790-tomahawk-wifi.jpg'
   },
   {
     id: 'msi-pro-z790-p-wifi',
@@ -228,7 +228,7 @@ const motherboards = [
     type: 'AM4',
     tier: 'high-end',
     bestFor: 'AMD high-performance and workstation builds',
-    image: './imgas/Motherboard/msi-pro-z790-p-wifi.jpg'
+    image: '/imgas/Motherboard/msi-pro-z790-p-wifi.jpg'
   },
   {
     id: 'asus-prime-b650m-a-wifi-ii',
@@ -239,7 +239,7 @@ const motherboards = [
     type: 'LGA1200',
     tier: 'mid-range',
     bestFor: 'Compact AMD gaming and workstation builds',
-    image: './imgas/Motherboard/asus-prime-b650m-a-wifi-ii.jpg'
+    image: '/imgas/Motherboard/asus-prime-b650m-a-wifi-ii.jpg'
   },
   {
     id: 'asus-prime-b760m-a-wifi-d4',
@@ -250,7 +250,7 @@ const motherboards = [
     type: 'LGA1200',
     tier: 'mid-range',
     bestFor: 'Intel mid-range productivity builds',
-    image: './imgas/Motherboard/asus-prime-b650m-a-wifi-ii.jpg'
+    image: '/imgas/Motherboard/asus-prime-b650m-a-wifi-ii.jpg'
   },
   {
     id: 'msi-b760-gaming-plus-wifi',
@@ -272,7 +272,7 @@ const motherboards = [
     type: 'AM4',
     tier: 'high-end',
     bestFor: 'AMD high-performance gaming builds',
-    image: './imgas/Motherboard/msi-mag-b760-tomahawk-wifi-ddr4.jpg'
+    image: '/imgas/Motherboard/msi-mag-b760-tomahawk-wifi-ddr4.jpg'
   },
   {
     id: 'asus-rog-maximus-z890-hero',
@@ -283,7 +283,7 @@ const motherboards = [
     type: 'AM4',
     tier: 'premium',
     bestFor: 'Extreme AMD gaming and enthusiast setups',
-    image: './imgas/Motherboard/asus-rog-maximus-z890-hero.jpg'
+    image: '/imgas/Motherboard/asus-rog-maximus-z890-hero.jpg'
   },
   {
     id: 'msi-pro-z790-p-wifi',
@@ -294,7 +294,7 @@ const motherboards = [
     type: 'AM4',
     tier: 'high-end',
     bestFor: 'AMD high-performance and workstation builds',
-    image: './imgas/Motherboard/msi-pro-z790-p-wifiwhite.jpg'
+    image: '/imgas/Motherboard/msi-pro-z790-p-wifiwhite.jpg'
   },
   {
     id: 'asus-prime-b650m-a-wifi-iiblack',
@@ -305,7 +305,7 @@ const motherboards = [
     type: 'LGA1200',
     tier: 'mid-range',
     bestFor: 'Compact AMD gaming and workstation builds',
-    image: './imgas/Motherboard/asus-prime-b650m-a-wifi-iiblack.jpg'
+    image: '/imgas/Motherboard/asus-prime-b650m-a-wifi-iiblack.jpg'
   },
   {
     id: 'asus-prime-b760m-a-wifi-d4',
@@ -316,7 +316,7 @@ const motherboards = [
     type: 'LGA1200',
     tier: 'mid-range',
     bestFor: 'Intel mid-range productivity builds',
-    image: './imgas/Motherboard/asus-prime-b760m-a-wifi-d4.jpg'
+    image: '/imgas/Motherboard/asus-prime-b760m-a-wifi-d4.jpg'
   },
   {
     id: 'msi-mag-b760-tomahawk-wifi-ddr4',
@@ -327,7 +327,7 @@ const motherboards = [
     type: 'AM4',
     tier: 'high-end',
     bestFor: 'AMD high-performance gaming builds',
-    image: './imgas/Motherboard/msi-mag-b760-tomahawk-wifi-ddr4.jpg'
+    image: '/imgas/Motherboard/msi-mag-b760-tomahawk-wifi-ddr4.jpg'
   },
   {
     id: 'asus-rog-maximus-z890-hero',
@@ -338,7 +338,7 @@ const motherboards = [
     type: 'AM4',
     tier: 'premium',
     bestFor: 'Extreme AMD gaming and enthusiast setups',
-    image: './imgas/Motherboard/asus-rog-maximus-z890-hero.jpg'
+    image: '/imgas/Motherboard/asus-rog-maximus-z890-hero.jpg'
   },
 ];
 

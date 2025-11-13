@@ -8,7 +8,7 @@ const cpuCoolers = [
     type: 'Air',
     tier: 'premium',
     bestFor: 'Enthusiast / overclocking builds',
-    image: './imgas/Coller/nhd15.jpg'
+    image: '/imgas/Coller/nhd15.jpg'
   },
   {
     id: 'nhu12a',
@@ -19,7 +19,7 @@ const cpuCoolers = [
     type: 'Air',
     tier: 'premium',
     bestFor: 'High-performance builds in mid-size cases',
-    image: './imgas/Coller/nhu12a.jpg'
+    image: '/imgas/Coller/nhu12a.jpg'
   },
   {
     id: 'nhl9i',
@@ -30,7 +30,7 @@ const cpuCoolers = [
     type: 'Air',
     tier: 'budget/mid',
     bestFor: 'Small form factor PCs',
-    image: './imgas/Coller/nhl9i.jpg'
+    image: '/imgas/Coller/nhl9i.jpg'
   },
   {
     id: 'nhu12s',
@@ -41,7 +41,7 @@ const cpuCoolers = [
     type: 'Air',
     tier: 'mid-range',
     bestFor: 'Tight builds and quiet systems',
-    image: './imgas/Coller/nhu12s.jpg'
+    image: '/imgas/Coller/nhu12s.jpg'
   },
   {
     id: 'nhd12l',
@@ -52,7 +52,7 @@ const cpuCoolers = [
     type: 'Air',
     tier: 'high-mid',
     bestFor: 'Cases with limited height needing solid cooling',
-    image: './imgas/Coller/nhd12l.jpg'
+    image: '/imgas/Coller/nhd12l.jpg'
   },
   {
     id: 'af36',
@@ -63,7 +63,7 @@ const cpuCoolers = [
     type: 'Air',
     tier: 'budget',
     bestFor: 'Entry-level gaming and budget builds',
-    image: './imgas/Coller/af36.jpg'
+    image: '/imgas/Coller/af36.jpg'
   },
   {
     id: 'bdr5',
@@ -74,7 +74,7 @@ const cpuCoolers = [
     type: 'Air',
     tier: 'high-mid',
     bestFor: 'Silent gaming and workstation builds',
-    image: './imgas/Coller/bdr5.jpg'
+    image: '/imgas/Coller/bdr5.jpg'
   },
   {
     id: 'bpr3lx',
@@ -85,7 +85,7 @@ const cpuCoolers = [
     type: 'Air',
     tier: 'mid-range',
     bestFor: 'Mainstream gaming and productivity PCs',
-    image: './imgas/Coller/bpr3lx.jpg'
+    image: '/imgas/Coller/bpr3lx.jpg'
   },
   {
     id: 'bprs2',
@@ -96,7 +96,7 @@ const cpuCoolers = [
     type: 'Air',
     tier: 'budget',
     bestFor: 'Compact or office PCs',
-    image: './imgas/Coller/bprs2.jpg'
+    image: '/imgas/Coller/bprs2.jpg'
   },
   {
     id: 'cn240',
@@ -107,7 +107,7 @@ const cpuCoolers = [
     type: 'AIO',
     tier: 'mid-range',
     bestFor: 'High-performance compact builds',
-    image: './imgas/Coller/cn240.jpg'
+    image: '/imgas/Coller/cn240.jpg'
   },
   {
     id: 'cn360',
@@ -118,7 +118,7 @@ const cpuCoolers = [
     type: 'AIO',
     tier: 'high-mid',
     bestFor: 'High-end gaming and multi-core CPUs',
-    image: './imgas/Coller/cn360.jpg'
+    image: '/imgas/Coller/cn360.jpg'
   },
   {
     id: 'cn240a',
@@ -129,7 +129,7 @@ const cpuCoolers = [
     type: 'AIO',
     tier: 'mid-range',
     bestFor: 'Aesthetic builds and high-performance 240mm setups',
-    image: './imgas/Coller/cn240.jpg'
+    image: '/imgas/Coller/cn240.jpg'
   },
   {
     id: 'cn360a',
@@ -140,7 +140,7 @@ const cpuCoolers = [
     type: 'AIO',
     tier: 'premium',
     bestFor: 'Enthusiast builds and heavy workloads',
-    image: './imgas/Coller/cn360.jpg'
+    image: '/imgas/Coller/cn360.jpg'
   },
   {
     id: 'nk240',
@@ -151,7 +151,7 @@ const cpuCoolers = [
     type: 'AIO',
     tier: 'premium',
     bestFor: 'Aesthetic enthusiast builds with an LCD pump option',
-    image: './imgas/Coller/nk240.jpg'
+    image: '/imgas/Coller/nk240.jpg'
   },
   {
     id: 'thermalright-gv360',
@@ -162,7 +162,7 @@ const cpuCoolers = [
     type: 'AIO',
     tier: 'high-mid',
     bestFor: 'High-performance and showcase builds',
-    image: './imgas/Coller/thermalright-gv360.jpg'
+    image: '/imgas/Coller/thermalright-gv360.jpg'
   },
   {
     id: 'cm-ml240l',
@@ -173,7 +173,7 @@ const cpuCoolers = [
     type: 'AIO',
     tier: 'mid-range',
     bestFor: 'Reliable all-round cooling for mainstream builds',
-    image: './imgas/Coller/cm-ml240l.jpg'
+    image: '/imgas/Coller/cm-ml240l.jpg'
   },
   {
     id: 'cm-atmos-240',
@@ -184,7 +184,7 @@ const cpuCoolers = [
     type: 'AIO',
     tier: 'mid-range',
     bestFor: 'Customizable builds and users who like pump-top modding',
-    image: './imgas/Coller/cm-atmos-240.jpg'
+    image: '/imgas/Coller/cm-atmos-240.jpg'
   },
   {
     id: 'enermax-liqtech-xtr',
@@ -195,6 +195,6 @@ const cpuCoolers = [
     type: 'AIO',
     tier: 'workstation/premium',
     bestFor: 'Threadripper / high-TDP workstation CPUs',
-    image: './imgas/Coller/enermax-liqtech-xtr.jpg'
+    image: '/imgas/Coller/enermax-liqtech-xtr.jpg'
   }
 ];

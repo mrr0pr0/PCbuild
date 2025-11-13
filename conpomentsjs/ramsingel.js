@@ -8,7 +8,7 @@ const pcRam = [
     type: 'DDR4',
     tier: 'mid-range',
     bestFor: 'General gaming and productivity builds',
-    image: './imgas/RAM/corsair-vengeance-lpx-16gb-3200mhz.jpg'
+    image: '/imgas/RAM/corsair-vengeance-lpx-16gb-3200mhz.jpg'
   },
   {
     id: 'gskill-trident-z-rgb-16gb-3600mhz',
@@ -19,7 +19,7 @@ const pcRam = [
     type: 'DDR4',
     tier: 'mid-range',
     bestFor: 'Entry gaming rigs with RGB focus',
-    image: './imgas/RAM/gskill-trident-z-rgb-16gb-3600mhz.jpg'
+    image: '/imgas/RAM/gskill-trident-z-rgb-16gb-3600mhz.jpg'
   },
   {
     id: 'kingston-fury-beast-16gb-3200mhz',
@@ -30,7 +30,7 @@ const pcRam = [
     type: 'DDR4',
     tier: 'budget',
     bestFor: 'Basic gaming and everyday PCs',
-    image: './imgas/RAM/kingston-fury-beast-16gb-3200mhz.jpg'
+    image: '/imgas/RAM/kingston-fury-beast-16gb-3200mhz.jpg'
   },
   {
     id: 'gskill-ripjaws-v-16gb-3200mhz',
@@ -41,7 +41,7 @@ const pcRam = [
     type: 'DDR4',
     tier: 'budget',
     bestFor: 'Compact and affordable builds',
-    image: './imgas/RAM/gskill-ripjaws-v-16gb-3200mhz.jpg'
+    image: '/imgas/RAM/gskill-ripjaws-v-16gb-3200mhz.jpg'
   },
   {
     id: 'corsair-vengeance-rgb-pro-32gb-3600mhz',
@@ -52,7 +52,7 @@ const pcRam = [
     type: 'DDR4',
     tier: 'premium',
     bestFor: 'High-end gaming and workstation use',
-    image: './imgas/RAM/corsair-vengeance-rgb-pro-32gb-3600mhz.jpg'
+    image: '/imgas/RAM/corsair-vengeance-rgb-pro-32gb-3600mhz.jpg'
   },
   {
     id: 'corsair-dominator-titanium-rgb-32gb-3600mhzblack',
@@ -63,7 +63,7 @@ const pcRam = [
     type: 'DDR5',
     tier: 'high-end',
     bestFor: 'Gaming and creative workstations',
-    image: './imgas/RAM/gskill-trident-z-neo-32gb-3600mhzblack.jpg'
+    image: '/imgas/RAM/gskill-trident-z-neo-32gb-3600mhzblack.jpg'
   },
   {
     id: 'corsair-vengeance-lpx-32gb-3200mhz',
@@ -74,7 +74,7 @@ const pcRam = [
     type: 'DDR4',
     tier: 'high-end',
     bestFor: 'Power users needing more memory',
-    image: './imgas/RAM/corsair-vengeance-lpx-16gb-3200mhz.jpg'
+    image: '/imgas/RAM/corsair-vengeance-lpx-16gb-3200mhz.jpg'
   },
   {
     id: 'kingston-fury-beast-32gb-3200mhz',
@@ -85,7 +85,7 @@ const pcRam = [
     type: 'DDR4',
     tier: 'high-end',
     bestFor: 'Advanced gaming setups',
-    image: './imgas/RAM/kingston-fury-beast-32gb-3200mhz.jpg'
+    image: '/imgas/RAM/kingston-fury-beast-32gb-3200mhz.jpg'
   },
   {
     id: 'corsair-vengeance-rgb-pro-16gb-3200mhz',
@@ -96,7 +96,7 @@ const pcRam = [
     type: 'DDR4',
     tier: 'mid-range',
     bestFor: 'Gaming with aesthetic builds',
-    image: './imgas/RAM/corsair-vengeance-rgb-pro-32gb-3600mhz.jpg'
+    image: '/imgas/RAM/corsair-vengeance-rgb-pro-32gb-3600mhz.jpg'
   },
   {
     id: 'corsair-dominator-titanium-rgb-64gb-6000mhz',
@@ -107,7 +107,7 @@ const pcRam = [
     type: 'DDR4',
     tier: 'mid-range',
     bestFor: 'Mainstream gaming builds',
-    image: './imgas/RAM/corsair-dominator-titanium-rgb-64gb-6000mhz.jpg'
+    image: '/imgas/RAM/corsair-dominator-titanium-rgb-64gb-6000mhz.jpg'
   },
   {
     id: 'kingston-fury-beast-8gb-3200mhz',
@@ -118,7 +118,7 @@ const pcRam = [
     type: 'DDR4',
     tier: 'budget',
     bestFor: 'Basic computing needs',
-    image: './imgas/RAM/kingston-fury-beast-8gb-3200mhz.jpg'
+    image: '/imgas/RAM/kingston-fury-beast-8gb-3200mhz.jpg'
   },
   {
     id: 'kingston-fury-beast-16gb-5200mhz',
@@ -129,7 +129,7 @@ const pcRam = [
     type: 'DDR5',
     tier: 'mid-range',
     bestFor: 'Modern gaming and productivity',
-    image: './imgas/RAM/kingston-fury-beast-16gb-5200mhz.jpg'
+    image: '/imgas/RAM/kingston-fury-beast-16gb-5200mhz.jpg'
   },
   {
     id: 'corsair-vengeance-32gb-5200mhz',
@@ -140,7 +140,7 @@ const pcRam = [
     type: 'DDR5',
     tier: 'high-end',
     bestFor: 'Future-proof gaming and workstation builds',
-    image: './imgas/RAM/corsair-vengeance-32gb-5200mhz.jpg'
+    image: '/imgas/RAM/corsair-vengeance-32gb-5200mhz.jpg'
   },
   {
     id: 'corsair-vengeance-lpx-16gb-3000mhz',
@@ -151,7 +151,7 @@ const pcRam = [
     type: 'DDR4',
     tier: 'budget',
     bestFor: 'Budget builds and older platforms',
-    image: './imgas/RAM/corsair-vengeance-lpx-16gb-3000mhz.jpg'
+    image: '/imgas/RAM/corsair-vengeance-lpx-16gb-3000mhz.jpg'
   },
   {
     id: 'gskill-trident-z-rgb-16gb-3200mhz',
@@ -162,6 +162,6 @@ const pcRam = [
     type: 'DDR4',
     tier: 'budget',
     bestFor: 'Entry-level gaming PCs with RGB',
-    image: './imgas/RAM/gskill-ripjaws-v-16gb-3200mhz.jpg'
+    image: '/imgas/RAM/gskill-ripjaws-v-16gb-3200mhz.jpg'
   }
 ];

@@ -8,7 +8,7 @@ const storage = [
     type: 'NVMe',
     tier: 'mid-range',
     bestFor: 'Gaming PCs and high-speed storage',
-    image: './imgas/Storege/nvme-500gb.jpg'
+    image: '/imgas/Storege/nvme-500gb.jpg'
   },
   {
     id: 'nvme-1tb',
@@ -19,7 +19,7 @@ const storage = [
     type: 'NVMe',
     tier: 'mid-range',
     bestFor: 'Gaming PCs, content creation, and fast storage needs',
-    image: './imgas/Storege/nvme'
+    image: '/imgas/Storege/nvme'
   },
   {
     id: 'nvme-4tb',
@@ -30,7 +30,7 @@ const storage = [
     type: 'NVMe',
     tier: 'high-end',
     bestFor: 'Enthusiast gaming PCs and workstation storage',
-    image: './imgas/Storege/nvme-4tb.jpg'
+    image: '/imgas/Storege/nvme-4tb.jpg'
   },
   {
     id: 'samgsung-2tb',
@@ -41,7 +41,7 @@ const storage = [
     type: 'NVMe',
     tier: 'high-end',
     bestFor: 'Gaming PCs and high-speed data storage',
-    image: './imgas/Storege/samgsung-2tb.jpg'
+    image: '/imgas/Storege/samgsung-2tb.jpg'
   },
   {
     id: 'KC3000-1tb',
@@ -52,7 +52,7 @@ const storage = [
     type: 'SATA',
     tier: 'budget',
     bestFor: 'Entry to mid-range PCs and general storage',
-    image: './imgas/Storege/KC3000-1tb.jpg'
+    image: '/imgas/Storege/KC3000-1tb.jpg'
   },
   {
     id: 'kingston-1tb',
@@ -63,7 +63,7 @@ const storage = [
     type: 'SATA',
     tier: 'budget',
     bestFor: 'Basic gaming and office PCs',
-    image: './imgas/Storege/kingston-1tb.jpg'
+    image: '/imgas/Storege/kingston-1tb.jpg'
   },
   {
     id: 'play2tb',
@@ -74,7 +74,7 @@ const storage = [
     type: 'SATA',
     tier: 'mid-range',
     bestFor: 'Mid-range PCs and light content creation',
-    image: './imgas/Storege/play2tb.jpg'
+    image: '/imgas/Storege/play2tb.jpg'
   },
   {
     id: 'fury-2tb',
@@ -85,7 +85,7 @@ const storage = [
     type: 'HDD',
     tier: 'mid-range',
     bestFor: 'Gaming PCs needing large storage',
-    image: './imgas/Storege/fury-2tb.jpg'
+    image: '/imgas/Storege/fury-2tb.jpg'
   },
   {
     id: 'WDSN850X-1tb',
@@ -96,7 +96,7 @@ const storage = [
     type: 'HDD',
     tier: 'mid-range',
     bestFor: 'Gaming and productivity PCs',
-    image: './imgas/Storege/WDSN850X-1tb.jpg'
+    image: '/imgas/Storege/WDSN850X-1tb.jpg'
   },
   {
     id: 'WDSN850X-4tb',
@@ -107,7 +107,7 @@ const storage = [
     type: 'HDD',
     tier: 'high-end',
     bestFor: 'High-end gaming rigs and content creators',
-    image: './imgas/Storege/WDSN850X-4tb.jpg'
+    image: '/imgas/Storege/WDSN850X-4tb.jpg'
   },
   {
     id: 'kingston-500gbblue',
@@ -118,7 +118,7 @@ const storage = [
     type: 'NVMe',
     tier: 'budget',
     bestFor: 'Entry-level PCs or boot drive',
-    image: './imgas/Storege/kingston-500gbblue.jpg'
+    image: '/imgas/Storege/kingston-500gbblue.jpg'
   },
   {
     id: 'v-nandssd-1tb',
@@ -129,7 +129,7 @@ const storage = [
     type: 'NVMe',
     tier: 'mid-range',
     bestFor: 'Gaming PCs and fast boot drives',
-    image: './imgas/Storege/v-nandssd-1tb.jpg'
+    image: '/imgas/Storege/v-nandssd-1tb.jpg'
   },
   {
     id: 'furryrenegade-4tb',
@@ -140,7 +140,7 @@ const storage = [
     type: 'NVMe',
     tier: 'premium',
     bestFor: 'High-end gaming and workstation builds',
-    image: './imgas/Storege/furryrenegade-4tb.jpg'
+    image: '/imgas/Storege/furryrenegade-4tb.jpg'
   },
   {
     id: 'mp600-1tb',
@@ -151,7 +151,7 @@ const storage = [
     type: 'NVMe',
     tier: 'mid-range',
     bestFor: 'Gaming PCs and general high-speed storage',
-    image: './imgas/Storege/mp600-1tb.jpg'
+    image: '/imgas/Storege/mp600-1tb.jpg'
   },
   {
     id: 'mp600-2tbxt',
@@ -162,7 +162,7 @@ const storage = [
     type: 'SATA',
     tier: 'mid-range',
     bestFor: 'Gaming PCs and general storage',
-    image: './imgas/Storege/mp600-2tbxt.jpg'
+    image: '/imgas/Storege/mp600-2tbxt.jpg'
   },
   {
     id: 'mp600-8tbNH',
@@ -173,7 +173,7 @@ const storage = [
     type: 'SATA',
     tier: 'premium',
     bestFor: 'Workstations and data-heavy setups',
-    image: './imgas/Storege/mp600-8tbNH.jpg'
+    image: '/imgas/Storege/mp600-8tbNH.jpg'
   },
   {
     id: 'kc3000-512gb',
@@ -184,7 +184,7 @@ const storage = [
     type: 'HDD',
     tier: 'budget',
     bestFor: 'Entry-level PCs and backups',
-    image: './imgas/Storege/KC3000-512gb.jpg'
+    image: '/imgas/Storege/KC3000-512gb.jpg'
   },
   {
     id: 'kingston-4tbblue',
@@ -206,7 +206,7 @@ const storage = [
     type: 'HDD',
     tier: 'high-end',
     bestFor: 'Gaming PCs and backup storage',
-    image: './imgas/Storege/hdd-8tb.jpg'
+    image: '/imgas/Storege/hdd-8tb.jpg'
   },
   {
     id: 'WDblakck-2tb',
@@ -217,7 +217,7 @@ const storage = [
     type: 'NVMe',
     tier: 'high-end',
     bestFor: 'Gaming and workstation PCs',
-    image: './imgas/Storege/WDblakck-2tb.jpg'
+    image: '/imgas/Storege/WDblakck-2tb.jpg'
   },
   {
     id: 'Samsung-1tb-heatsink',
@@ -228,7 +228,7 @@ const storage = [
     type: 'NVMe',
     tier: 'mid-range',
     bestFor: 'Gaming PCs and fast boot drives',
-    image: './imgas/Storege/Samsung-1tb-heatsink.jpg'
+    image: '/imgas/Storege/Samsung-1tb-heatsink.jpg'
   },
   {
     id: 'WDgreen-1tb',
@@ -239,7 +239,7 @@ const storage = [
     type: 'NVMe',
     tier: 'budget',
     bestFor: 'Entry-level PCs and general storage',
-    image: './imgas/Storege/WDgreen-1tb.jpg'
+    image: '/imgas/Storege/WDgreen-1tb.jpg'
   },
   {
     id: 'mp700pro-1tb',
@@ -250,7 +250,7 @@ const storage = [
     type: 'SATA',
     tier: 'mid-range',
     bestFor: 'Gaming PCs and mid-range builds',
-    image: './imgas/Storege/MP700-1tb.jpg'
+    image: '/imgas/Storege/MP700-1tb.jpg'
   },
   {
     id: 'wdgreen-500gb',
@@ -261,7 +261,7 @@ const storage = [
     type: 'SATA',
     tier: 'budget',
     bestFor: 'Basic PCs and backups',
-    image: './imgas/Storege/wdgreen-500gb.jpg'
+    image: '/imgas/Storege/wdgreen-500gb.jpg'
   },
   {
     id: 'wdblack-1tbsn8100',
@@ -272,7 +272,7 @@ const storage = [
     type: 'HDD',
     tier: 'mid-range',
     bestFor: 'Gaming PCs and general storage',
-    image: './imgas/Storege/wdblack-1tbsn8100.jpg'
+    image: '/imgas/Storege/wdblack-1tbsn8100.jpg'
   },
   {
     id: 'play-4tb',
@@ -283,7 +283,7 @@ const storage = [
     type: 'HDD',
     tier: 'high-end',
     bestFor: 'Gaming PCs, media libraries, and backups',
-    image: './imgas/Storege/play-4tb.jpg'
+    image: '/imgas/Storege/play-4tb.jpg'
   },
   {
     id: 'play-8tb',
@@ -327,7 +327,7 @@ const storage = [
     type: 'NVMe',
     tier: 'budget',
     bestFor: 'Entry-level PCs and fast storage',
-    image: './imgas/Storege/play2tb.jpg'
+    image: '/imgas/Storege/play2tb.jpg'
   },
   {
     id: 'wdblack-2tb-sn770m',
@@ -338,7 +338,7 @@ const storage = [
     type: 'NVMe',
     tier: 'high-end',
     bestFor: 'Gaming PCs and workstation storage',
-    image: '.imgas/Storege/wdblack-2tb-sn770m.jpg'
+    image: '/imgas/Storege/wdblack-2tb-sn770m.jpg'
   },
   {
     id: 'playwd-1tb-sn850p',
@@ -349,6 +349,6 @@ const storage = [
     type: 'NVMe',
     tier: 'mid-range',
     bestFor: 'Entry-level PCs and general storage',
-    image: '.imgas/Storege/playwd-1tb-sn850p.jpg'
+    image: '/imgas/Storege/playwd-1tb-sn850p.jpg'
   }
 ];
