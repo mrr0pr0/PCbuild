@@ -8,7 +8,7 @@ const psu = [
     type: 'gold',
     tier: 'budget',
     bestFor: 'High-end gaming PCs with single GPU',
-    image: './imgas/PSU/asus-tuf-gaming-850w-gold-psu.jpg'
+    image: '/imgas/PSU/asus-tuf-gaming-850w-gold-psu.jpg'
   },
   {
     id: 'corsair-rmx-series-rm750x-psu',
@@ -19,7 +19,7 @@ const psu = [
     type: 'gold',
     tier: 'mid-range',
     bestFor: 'Gaming and streaming PCs with moderate GPU load',
-    image: './imgas/PSU/corsair-rmx-series-rm750x-psu.jpg'
+    image: '/imgas/PSU/corsair-rmx-series-rm750x-psu.jpg'
   },
   {
     id: 'phanteks-amp-gh-komplett-edition-1200w-80-platinum-psu',
@@ -30,7 +30,7 @@ const psu = [
     type: '',
     tier: 'high-end',
     bestFor: 'Enthusiast gaming rigs and content creation PCs',
-    image: './imgas/PSU/phanteks-amp-gh-komplett-edition-1200w-80-platinum-psu.jpg'
+    image: '/imgas/PSU/phanteks-amp-gh-komplett-edition-1200w-80-platinum-psu.jpg'
   },
   {
     id: 'asus-tuf-gaming-1000w-gold-psu',
@@ -41,7 +41,7 @@ const psu = [
     type: '',
     tier: 'mid-range',
     bestFor: 'High-performance gaming PCs with one or two GPUs',
-    image: './imgas/PSU/asus-tuf-gaming-1000w-gold-psu.jpg'
+    image: '/imgas/PSU/asus-tuf-gaming-1000w-gold-psu.jpg'
   },
   {
     id: 'asus-tuf-gaming-750w-gold-psu',
@@ -52,7 +52,7 @@ const psu = [
     type: '',
     tier: 'budget',
     bestFor: 'Mid-range gaming PCs',
-    image: './imgas/PSU/asus-tuf-gaming-750w-gold-psu.jpg'
+    image: '/imgas/PSU/asus-tuf-gaming-750w-gold-psu.jpg'
   },
   {
     id: 'asus-tuf-gaming-1200w-gold-psu',
@@ -63,7 +63,7 @@ const psu = [
     type: '',
     tier: 'high-end',
     bestFor: 'High-end gaming rigs and workstation PCs',
-    image: './imgas/PSU/asus-tuf-gaming-1200w-gold-psu.jpg'
+    image: '/imgas/PSU/asus-tuf-gaming-1200w-gold-psu.jpg'
   },
   {
     id: 'phanteks-amp-gh-komplett-edition-1000w-80-platinum-psu',
@@ -74,7 +74,7 @@ const psu = [
     type: '',
     tier: 'mid-range',
     bestFor: 'Gaming PCs with multiple GPUs or overclocked CPUs',
-    image: './imgas/PSU/phanteks-amp-gh-komplett-edition-1000w-80-platinum-psu.jpg'
+    image: '/imgas/PSU/phanteks-amp-gh-komplett-edition-1000w-80-platinum-psu.jpg'
   },
   {
     id: 'msi-mag-a750gl-pcie5-750w-psu',
@@ -85,7 +85,7 @@ const psu = [
     type: '',
     tier: 'budget',
     bestFor: 'Mid-range gaming PCs',
-    image: './imgas/PSU/msi-mag-a750gl-pcie5-750w-psu.jpg'
+    image: '/imgas/PSU/msi-mag-a750gl-pcie5-750w-psu.jpg'
   },
   {
     id: 'msi-mag-a650gl-650w-psu',
@@ -96,7 +96,7 @@ const psu = [
     type: '',
     tier: 'budget',
     bestFor: 'Entry-level gaming PCs',
-    image: './imgas/PSU/msi-mag-a650gl-650w-psu.jpg'
+    image: '/imgas/PSU/msi-mag-a650gl-650w-psu.jpg'
   },
   {
     id: 'msi-mag-a850gl-pcie5-850w-psu',
@@ -107,7 +107,7 @@ const psu = [
     type: '',
     tier: 'mid-range',
     bestFor: 'Gaming PCs with one high-end GPU',
-    image: './imgas/PSU/msi-mag-a850gl-pcie5-850w-psu.jpg'
+    image: '/imgas/PSU/msi-mag-a850gl-pcie5-850w-psu.jpg'
   },
   {
     id: 'cooler-master-mwe-gold-650w-v2-psu',
@@ -118,7 +118,7 @@ const psu = [
     type: '',
     tier: 'budget',
     bestFor: 'Entry-level to mid-range gaming PCs',
-    image: './imgas/PSU/cooler-master-mwe-gold-650w-v2-psu.jpg'
+    image: '/imgas/PSU/cooler-master-mwe-gold-650w-v2-psu.jpg'
   },
   {
     id: 'corsair-rmx-series-rm850x-psu',
@@ -129,7 +129,7 @@ const psu = [
     type: '',
     tier: 'mid-range',
     bestFor: 'High-performance gaming PCs',
-    image: './imgas/PSU/corsair-rmx-series-rm850x-psu.jpg'
+    image: '/imgas/PSU/corsair-rmx-series-rm850x-psu.jpg'
   },
   {
     id: 'corsair-rme-series-rm750e-psu-white',
@@ -140,7 +140,7 @@ const psu = [
     type: '',
     tier: 'budget',
     bestFor: 'Mid-range gaming PCs',
-    image: './imgas/PSU/corsair-rme-series-rm750e-psu-white.jpg'
+    image: '/imgas/PSU/corsair-rme-series-rm750e-psu-white.jpg'
   },
   {
     id: 'corsair-rme-series-rm850e-psu-black',
@@ -151,7 +151,7 @@ const psu = [
     type: '',
     tier: 'mid-range',
     bestFor: 'Gaming PCs with one GPU',
-    image: './imgas/PSU/corsair-rme-series-rm850e-psu-black.jpg'
+    image: '/imgas/PSU/corsair-rme-series-rm850e-psu-black.jpg'
   },
   {
     id: 'asus-rog-loki-sfx-l-1000w-psu',
@@ -162,7 +162,7 @@ const psu = [
     type: '',
     tier: 'high-end',
     bestFor: 'Mini-ITX high-end gaming PCs',
-    image: './imgas/PSU/asus-rog-loki-sfx-l-1000w-psu.jpg'
+    image: '/imgas/PSU/asus-rog-loki-sfx-l-1000w-psu.jpg'
   },
   {
     id: 'asus-rog-strix-850w-platinum-psu',
@@ -173,7 +173,7 @@ const psu = [
     type: '',
     tier: 'high-end',
     bestFor: 'High-end gaming PCs and content creation rigs',
-    image: './imgas/PSU/asus-rog-strix-850w-platinum-psu.jpg'
+    image: '/imgas/PSU/asus-rog-strix-850w-platinum-psu.jpg'
   },
   {
     id: 'msi-meg-ai1300p-pcie5-1300w-psu',
@@ -184,7 +184,7 @@ const psu = [
     type: '',
     tier: 'premium',
     bestFor: 'High-end gaming and workstation PCs',
-    image: './imgas/PSU/msi-meg-ai1300p-pcie5-1300w-psu.jpg'
+    image: '/imgas/PSU/msi-meg-ai1300p-pcie5-1300w-psu.jpg'
   },
   {
     id: 'asus-rog-loki-sfx-l-850w-psu',
@@ -195,7 +195,7 @@ const psu = [
     type: '',
     tier: 'high-end',
     bestFor: 'Mini-ITX gaming PCs',
-    image: './imgas/PSU/asus-rog-loki-sfx-l-850w-psu.jpg'
+    image: '/imgas/PSU/asus-rog-loki-sfx-l-850w-psu.jpg'
   },
   {
     id: 'corsair-ax1600i-1600w-psu',
@@ -206,7 +206,7 @@ const psu = [
     type: '',
     tier: 'premium',
     bestFor: 'Extreme high-end gaming rigs and workstations',
-    image: './imgas/PSU/corsair-ax1600i-1600w-psu.jpg'
+    image: '/imgas/PSU/corsair-ax1600i-1600w-psu.jpg'
   },
   {
     id: 'corsair-sf-series-sf1000-80-plus-platinum-sfx-psu',
@@ -217,7 +217,7 @@ const psu = [
     type: '',
     tier: 'high-end',
     bestFor: 'Mini-ITX gaming PCs and compact workstations',
-    image: './imgas/PSU/corsair-sf-series-sf1000-80-plus-platinum-sfx-psu.jpg'
+    image: '/imgas/PSU/corsair-sf-series-sf1000-80-plus-platinum-sfx-psu.jpg'
   },
   {
     id: 'be-quiet-pure-power-12-650w-psu',
@@ -228,7 +228,7 @@ const psu = [
     type: '',
     tier: 'budget',
     bestFor: 'Entry-level gaming PCs',
-    image: './imgas/PSU/be-quiet-pure-power-12-650w-psu.jpg'
+    image: '/imgas/PSU/be-quiet-pure-power-12-650w-psu.jpg'
   },
   {
     id: 'corsair-hxi-series-hx1000i-1000w-psu',
@@ -239,7 +239,7 @@ const psu = [
     type: '',
     tier: 'high-end',
     bestFor: 'High-end gaming and workstation PCs',
-    image: './imgas/PSU/corsair-hxi-series-hx1000i-1000w-psu.jpg'
+    image: '/imgas/PSU/corsair-hxi-series-hx1000i-1000w-psu.jpg'
   },
   {
     id: 'corsair-rme-series-rm1000e-psu-black',
@@ -250,7 +250,7 @@ const psu = [
     type: '',
     tier: 'mid-range',
     bestFor: 'High-performance gaming PCs',
-    image: './imgas/PSU/corsair-rme-series-rm1000e-psu-black.jpg'
+    image: '/imgas/PSU/corsair-rme-series-rm1000e-psu-black.jpg'
   },
   {
     id: 'corsair-rme-series-rm1000e-psu-white',
@@ -261,7 +261,7 @@ const psu = [
     type: '',
     tier: 'mid-range',
     bestFor: 'High-performance gaming PCs',
-    image: './imgas/PSU/corsair-rme-series-rm1000e-psu-white.jpg'
+    image: '/imgas/PSU/corsair-rme-series-rm1000e-psu-white.jpg'
   },
   {
     id: 'be-quiet-pure-power-12-550w-psu',
@@ -272,7 +272,7 @@ const psu = [
     type: '',
     tier: 'budget',
     bestFor: 'Entry-level gaming PCs',
-    image: './imgas/PSU/be-quiet-pure-power-12-550w-psu.jpg'
+    image: '/imgas/PSU/be-quiet-pure-power-12-550w-psu.jpg'
   },
   {
     id: 'be-quiet-pure-power-12-1000w-psu',
@@ -283,7 +283,7 @@ const psu = [
     type: '',
     tier: 'mid-range',
     bestFor: 'High-performance gaming PCs',
-    image: './imgas/PSU/be-quiet-pure-power-12-1000w-psu.jpg'
+    image: '/imgas/PSU/be-quiet-pure-power-12-1000w-psu.jpg'
   },
   {
     id: 'be-quiet-pure-power-12-850w-psu',
@@ -294,7 +294,7 @@ const psu = [
     type: '',
     tier: 'mid-range',
     bestFor: 'Gaming PCs with high-end GPU',
-    image: './imgas/PSU/be-quiet-pure-power-12-850w-psu.jpg'
+    image: '/imgas/PSU/be-quiet-pure-power-12-850w-psu.jpg'
   },
   {
     id: 'be-quiet-pure-power-12-m-850w-psu',
@@ -305,7 +305,7 @@ const psu = [
     type: '',
     tier: 'mid-range',
     bestFor: 'High-performance gaming and workstation PCs',
-    image: './imgas/PSU/be-quiet-pure-power-12-m-850w-psu.jpg'
+    image: '/imgas/PSU/be-quiet-pure-power-12-m-850w-psu.jpg'
   },
   {
     id: 'be-quiet-power-zone-2-750w-psu',
@@ -316,7 +316,7 @@ const psu = [
     type: '',
     tier: 'mid-range',
     bestFor: 'Mid-range gaming PCs',
-    image: './imgas/PSU/be-quiet-power-zone-2-750w-psu.jpg'
+    image: '/imgas/PSU/be-quiet-power-zone-2-750w-psu.jpg'
   },
   {
     id: 'asus-prime-850w-gold-psu',
@@ -327,7 +327,7 @@ const psu = [
     type: '',
     tier: 'budget',
     bestFor: 'Mid-range gaming PCs',
-    image: './imgas/PSU/asus-prime-850w-gold-psu.jpg'
+    image: '/imgas/PSU/asus-prime-850w-gold-psu.jpg'
   },
   {
     id: 'corsair-hx1200i-1200w-psu',
@@ -338,7 +338,7 @@ const psu = [
     type: '',
     tier: 'high-end',
     bestFor: 'High-end gaming and workstation PCs',
-    image: './imgas/PSU/corsair-hx1200i-1200w-psu.jpg'
+    image: '/imgas/PSU/corsair-hx1200i-1200w-psu.jpg'
   },
   {
     id: 'be-quiet-power-zone-2-1000w-psu',
@@ -349,7 +349,7 @@ const psu = [
     type: '',
     tier: 'mid-range',
     bestFor: 'High-end gaming PCs',
-    image: './imgas/PSU/be-quiet-power-zone-2-1000w-psu.jpg'
+    image: '/imgas/PSU/be-quiet-power-zone-2-1000w-psu.jpg'
   },
   {
     id: 'be-quiet-dark-power-pro-13-1600w-psu',
@@ -360,7 +360,7 @@ const psu = [
     type: '',
     tier: 'premium',
     bestFor: 'Extreme high-end gaming rigs and workstations',
-    image: './imgas/PSU/be-quiet-dark-power-pro-13-1600w-psu.jpg'
+    image: '/imgas/PSU/be-quiet-dark-power-pro-13-1600w-psu.jpg'
   },
   {
     id: 'be-quiet-dark-power-pro-13-1300w-psu',
@@ -371,6 +371,6 @@ const psu = [
     type: '',
     tier: 'premium',
     bestFor: 'High-end gaming and workstation PCs',
-    image: './imgas/PSU/be-quiet-dark-power-pro-13-1300w-psu.jpg'
+    image: '/imgas/PSU/be-quiet-dark-power-pro-13-1300w-psu.jpg'
   }
 ];
