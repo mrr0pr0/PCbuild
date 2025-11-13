@@ -8,7 +8,7 @@ const gpu = [
     type: 'GPU',
     tier: 'high-end',
     bestFor: '4K gaming / content creators',
-    image: './imgas/GPU/rx79xtx.jpg'
+    image: '/imgas/GPU/rx79xtx.jpg'
   },
   {
     id: 'gt1030',
@@ -19,7 +19,7 @@ const gpu = [
     type: 'GPU',
     tier: 'entry',
     bestFor: 'Casual gaming / media PCs',
-    image: './imgas/GPU/gt1030.jpg'
+    image: '/imgas/GPU/gt1030.jpg'
   },
   {
     id: 'rtx5090',
@@ -30,7 +30,7 @@ const gpu = [
     type: 'GPU',
     tier: 'enthusiast',
     bestFor: 'Ultimate gaming / workstation',
-    image: './imgas/GPU/rtx5090.jpg'
+    image: '/imgas/GPU/rtx5090.jpg'
   },
   {
     id: 'rtx5080tuf',
@@ -41,7 +41,7 @@ const gpu = [
     type: 'GPU',
     tier: 'high-end',
     bestFor: 'High-resolution gaming / overclocking',
-    image: './imgas/GPU/rtx5080tuf.jpg'
+    image: '/imgas/GPU/rtx5080tuf.jpg'
   },
   {
     id: 'rtx4060ventus',
@@ -63,7 +63,7 @@ const gpu = [
     type: 'GPU',
     tier: 'mid-range',
     bestFor: '1440p gaming',
-    image: './imgas/GPU/rtx5070prime.jpg'
+    image: '/imgas/GPU/rtx5070prime.jpg'
   },
   {
     id: 'rtx5080astral',
@@ -74,7 +74,7 @@ const gpu = [
     type: 'GPU',
     tier: 'high-end',
     bestFor: '1440p / 4K gaming',
-    image: './imgas/GPU/rtx5080astral.jpg'
+    image: '/imgas/GPU/rtx5080astral.jpg'
   },
   {
     id: 'rx9070prime',
@@ -85,7 +85,7 @@ const gpu = [
     type: 'GPU',
     tier: 'mid-range',
     bestFor: '1440p gaming / creative work',
-    image: './imgas/GPU/rx9070prime.jpg'
+    image: '/imgas/GPU/rx9070prime.jpg'
   },
   {
     id: 'rtx3050dual',
@@ -96,7 +96,7 @@ const gpu = [
     type: 'GPU',
     tier: 'entry',
     bestFor: '1080p gaming / budget builds',
-    image: './imgas/GPU/rtx3050dual.jpg'
+    image: '/imgas/GPU/rtx3050dual.jpg'
   },
   {
     id: 'rtx5060titurf',
@@ -107,7 +107,7 @@ const gpu = [
     type: 'GPU',
     tier: 'mid-range',
     bestFor: '1080p / 1440p gaming',
-    image: './imgas/GPU/rtx5060titurf.jpg'
+    image: '/imgas/GPU/rtx5060titurf.jpg'
   },
   {
     id: 'rtx5070tuf',
@@ -118,7 +118,7 @@ const gpu = [
     type: 'GPU',
     tier: 'mid-range',
     bestFor: '1440p gaming',
-    image: './imgas/GPU/rtx5070tuf.jpg'
+    image: '/imgas/GPU/rtx5070tuf.jpg'
   },
   {
     id: 'rtx5090phantom',
@@ -129,7 +129,7 @@ const gpu = [
     type: 'GPU',
     tier: 'enthusiast',
     bestFor: 'Ultimate gaming / workstation',
-    image: './imgas/GPU/rtx5090suprim.jpg'
+    image: '/imgas/GPU/rtx5090suprim.jpg'
   },
   {
     id: 'arcb580',
@@ -140,7 +140,7 @@ const gpu = [
     type: 'GPU',
     tier: 'entry',
     bestFor: '1080p gaming / office setups',
-    image: './imgas/GPU/arcb580.jpg'
+    image: '.imgas/GPU/arcb580.jpg'
   },
   {
     id: 'rtx3050phoenix',
@@ -151,7 +151,7 @@ const gpu = [
     type: 'GPU',
     tier: 'entry',
     bestFor: '1080p gaming',
-    image: './imgas/GPU/rtx3050phoenix.jpg'
+    image: '/imgas/GPU/rtx3050phoenix.jpg'
   },
   {
     id: 'rtx5080trio',
@@ -162,7 +162,7 @@ const gpu = [
     type: 'GPU',
     tier: 'high-end',
     bestFor: '1440p / 4K gaming',
-    image: './imgas/GPU/rtx5080trio.jpg'
+    image: '/imgas/GPU/rtx5080trio.jpg'
   },
   {
     id: 'rtx5060prime',
@@ -173,7 +173,7 @@ const gpu = [
     type: 'GPU',
     tier: 'mid-range',
     bestFor: '1080p / 1440p gaming',
-    image: './imgas/GPU/rtx5060prime.jpg'
+    image: '/imgas/GPU/rtx5060prime.jpg'
   },
   {
     id: 'rtx5090lc',
@@ -184,7 +184,7 @@ const gpu = [
     type: 'GPU',
     tier: 'enthusiast',
     bestFor: 'Ultimate gaming / workstation',
-    image: './imgas/GPU/rtx5090lc.jpg'
+    image: '/imgas/GPU/rtx5090lc.jpg'
   },
   {
     id: 'rtx5070python',
@@ -195,7 +195,7 @@ const gpu = [
     type: 'GPU',
     tier: 'mid-range',
     bestFor: '1440p gaming',
-    image: './imgas/GPU/rtx5070python.jpg'
+    image: '/imgas/GPU/rtx5070python.jpg'
   },
   {
     id: 'rx9070xt',
@@ -206,7 +206,7 @@ const gpu = [
     type: 'GPU',
     tier: 'high-end',
     bestFor: '4K gaming / content creation',
-    image: './imgas/GPU/rx9070xt.jpg'
+    image: '/imgas/GPU/rx9070xt.jpg'
   },
   {
     id: 'rx9060dual',
@@ -217,7 +217,7 @@ const gpu = [
     type: 'GPU',
     tier: 'mid-range',
     bestFor: '1080p / 1440p gaming',
-    image: './imgas/GPU/rx9060dual.jpg'
+    image: '/imgas/GPU/rx9060dual.jpg'
   },
   {
     id: 'rtx5080liquid',
@@ -228,7 +228,7 @@ const gpu = [
     type: 'GPU',
     tier: 'high-end',
     bestFor: '1440p / 4K gaming',
-    image: './imgas/GPU/rtx5080liquid.jpg'
+    image: '/imgas/GPU/rtx5080liquid.jpg'
   },
   {
     id: 'rtx5080ventus',
@@ -239,7 +239,7 @@ const gpu = [
     type: 'GPU',
     tier: 'high-end',
     bestFor: '1440p / 4K gaming',
-    image: './imgas/GPU/rtx5080ventus.jpg'
+    image: '/imgas/GPU/rtx5080ventus.jpg'
   },
   {
     id: 'arca310eco',
@@ -250,7 +250,7 @@ const gpu = [
     type: 'GPU',
     tier: 'entry',
     bestFor: 'Office / light 1080p gaming',
-    image: './imgas/GPU/arca310eco.jpg'
+    image: '/imgas/GPU/arca310eco.jpg'
   },
   {
     id: 'rtx5070trio',
@@ -261,7 +261,7 @@ const gpu = [
     type: 'GPU',
     tier: 'mid-range',
     bestFor: '1440p gaming',
-    image: './imgas/GPU/rtx5070trio.jpg'
+    image: '/imgas/GPU/rtx5070trio.jpg'
   },
   {
     id: 'rtx5060ventusplus',
@@ -272,7 +272,7 @@ const gpu = [
     type: 'GPU',
     tier: 'mid-range',
     bestFor: '1080p / 1440p gaming',
-    image: './imgas/GPU/rtx5060ventusplus.jpg'
+    image: '/imgas/GPU/rtx5060ventusplus.jpg'
   },
   {
     id: 'rtx5060turf',
@@ -283,7 +283,7 @@ const gpu = [
     type: 'GPU',
     tier: 'mid-range',
     bestFor: '1080p gaming',
-    image: './imgas/GPU/rtx5060turf.jpg'
+    image: '/imgas/GPU/rtx5060turf.jpg'
   },
   {
     id: 'rtx5090suprim',
@@ -294,7 +294,7 @@ const gpu = [
     type: 'GPU',
     tier: 'enthusiast',
     bestFor: 'Ultimate gaming / workstation',
-    image: './imgas/GPU/rtx5090suprim.jpg'
+    image: '/imgas/GPU/rtx5090suprim.jpg'
   },
   {
     id: 'rtx5070phoenix',
@@ -305,7 +305,7 @@ const gpu = [
     type: 'GPU',
     tier: 'high-end',
     bestFor: '1440p / 4K gaming',
-    image: './imgas/GPU/rtx5070phoenix.jpg'
+    image: '/imgas/GPU/rtx5070phoenix.jpg'
   },
   {
     id: 'rtx5060ghost',
@@ -316,7 +316,7 @@ const gpu = [
     type: 'GPU',
     tier: 'mid-range',
     bestFor: '1080p / 1440p gaming',
-    image: './imgas/GPU/rtx5060ghost.jpg'
+    image: '/imgas/GPU/rtx5060ghost.jpg'
   },
   {
     id: 'rtx5070ventus',
@@ -327,7 +327,7 @@ const gpu = [
     type: 'GPU',
     tier: 'mid-range',
     bestFor: '1440p gaming / content creation',
-    image: './imgas/GPU/rtx5070ventuswhite.jpg'
+    image: '/imgas/GPU/rtx5070ventuswhite.jpg'
   },
   {
     id: 'rx9070quicksilver',
@@ -338,7 +338,7 @@ const gpu = [
     type: 'GPU',
     tier: 'high-end',
     bestFor: '1440p / 4K gaming',
-    image: './imgas/GPU/rx9070quicksilver.jpg'
+    image: '/imgas/GPU/rx9070quicksilver.jpg'
   },
   {
     id: 'rtx3050pegasus',
@@ -349,7 +349,7 @@ const gpu = [
     type: 'GPU',
     tier: 'entry',
     bestFor: '1080p gaming / budget builds',
-    image: './imgas/GPU/rtx3050pegasus.jpg'
+    image: '/imgas/GPU/rtx3050pegasus.jpg'
   },
   {
     id: 'rtx5060ventusplus2',
@@ -360,7 +360,7 @@ const gpu = [
     type: 'GPU',
     tier: 'mid-range',
     bestFor: '1080p / 1440p gaming',
-    image: './imgas/GPU/rtx5060ventusplus2.jpg'
+    image: '/imgas/GPU/rtx5060ventusplus2.jpg'
   },
   {
     id: 'rx9070mercury',
@@ -371,7 +371,7 @@ const gpu = [
     type: 'GPU',
     tier: 'high-end',
     bestFor: '1440p / 4K gaming',
-    image: './imgas/GPU/rx9070mercury.jpg'
+    image: '/imgas/GPU/rx9070mercury.jpg'
   },
   {
     id: 'rx9070hellhound',
@@ -382,7 +382,7 @@ const gpu = [
     type: 'GPU',
     tier: 'high-end',
     bestFor: '1440p / 4K gaming',
-    image: './imgas/GPU/rx9070hellhound.jpg'
+    image: '/imgas/GPU/rx9070hellhound.jpg'
   },
   {
     id: 'rx9070magnetic',
@@ -393,7 +393,7 @@ const gpu = [
     type: 'GPU',
     tier: 'high-end',
     bestFor: '1440p / 4K gaming',
-    image: './imgas/GPU/rx9070magnetic.jpg'
+    image: '/imgas/GPU/rx9070magnetic.jpg'
   },
   {
     id: 'rtx5090tuf',
@@ -404,7 +404,7 @@ const gpu = [
     type: 'GPU',
     tier: 'enthusiast',
     bestFor: 'Ultimate gaming / workstation',
-    image: './imgas/GPU/rtx5090tuf.jpg'
+    image: '/imgas/GPU/rtx5090tuf.jpg'
   },
   {
     id: 'rtx3050lp',
@@ -415,6 +415,6 @@ const gpu = [
     type: 'GPU',
     tier: 'entry',
     bestFor: 'Compact 1080p builds',
-    image: './imgas/GPU/rtx3050lp.jpg'
+    image: '/imgas/GPU/rtx3050lp.jpg'
   }
 ];
