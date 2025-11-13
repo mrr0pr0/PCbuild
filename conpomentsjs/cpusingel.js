@@ -8,7 +8,7 @@ const cpu = [
     type: 'AM5',
     tier: 'high-end',
     bestFor: 'Gaming and high-performance tasks',
-    image: './imgas/CPU/md-ryzen-7-7800x3d.jpg'
+    image: '/imgas/CPU/md-ryzen-7-7800x3d.jpg'
   },
   {
     id: 'amd-ryzen-5-5600x',
@@ -30,7 +30,7 @@ const cpu = [
     type: 'AM4',
     tier: 'mid-range',
     bestFor: 'Gaming and productivity',
-    image: './imgas/CPU/amd-ryzen-7-5700x.jpg'
+    image: '/imgas/CPU/amd-ryzen-7-5700x.jpg'
   },
   {
     id: 'amd-ryzen-7-5700g',
@@ -41,7 +41,7 @@ const cpu = [
     type: 'AM4',
     tier: 'high-end',
     bestFor: 'Gaming and creative work without dedicated GPU',
-    image: './imgas/CPU/amd-ryzen-7-5700g.jpg'
+    image: '/imgas/CPU/amd-ryzen-7-5700g.jpg'
   },
   {
     id: 'intel-core-i5-12400f',
@@ -52,7 +52,7 @@ const cpu = [
     type: 'LGA1700',
     tier: 'mid-range',
     bestFor: 'Mainstream gaming and office tasks',
-    image: './imgas/CPU/intel-core-i5-12400f.jpg'
+    image: '/imgas/CPU/intel-core-i5-12400f.jpg'
   },
   {
     id: 'amd-ryzen-9-7900x',
@@ -63,7 +63,7 @@ const cpu = [
     type: 'AM5',
     tier: 'high-end',
     bestFor: 'High-performance gaming and content creation',
-    image: './imgas/CPU/amd-ryzen-9-7900x.jpg'
+    image: '/imgas/CPU/amd-ryzen-9-7900x.jpg'
   },
   {
     id: 'amd-ryzen-7-9800x3d',
@@ -74,7 +74,7 @@ const cpu = [
     type: 'AM5',
     tier: 'high-end',
     bestFor: 'Gaming-focused builds',
-    image: './imgas/CPU/amd-ryzen-7-9800x3d.jpg'
+    image: '/imgas/CPU/amd-ryzen-7-9800x3d.jpg'
   },
   {
     id: 'intel-core-i5-14600kf',
@@ -85,7 +85,7 @@ const cpu = [
     type: 'LGA1700',
     tier: 'mid-range',
     bestFor: 'Budget-friendly Intel builds',
-    image: './imgas/CPU/intel-core-i5-14600kf.jpg'
+    image: '/imgas/CPU/intel-core-i5-14600kf.jpg'
   },
   {
     id: 'intel-core-i9-12900k',
@@ -96,7 +96,7 @@ const cpu = [
     type: 'LGA1700',
     tier: 'high-end',
     bestFor: 'High-performance gaming and productivity',
-    image: './imgas/CPU/intel-core-i9-12900k.jpg'
+    image: '/imgas/CPU/intel-core-i9-12900k.jpg'
   },
   {
     id: 'amd-ryzen-9-9950x3d',
@@ -107,7 +107,7 @@ const cpu = [
     type: 'AM5',
     tier: 'premium',
     bestFor: 'Enthusiast gaming and workstation tasks',
-    image: './imgas/CPU/amd-ryzen-9-9950x3d.jpg'
+    image: '/imgas/CPU/amd-ryzen-9-9950x3d.jpg'
   },
   {
     id: 'amd-ryzen-7-9700x',
@@ -118,7 +118,7 @@ const cpu = [
     type: 'AM4',
     tier: 'high-end',
     bestFor: 'Gaming and productivity',
-    image: './imgas/CPU/amd-ryzen-7-9700x.jpg'
+    image: '/imgas/CPU/amd-ryzen-7-9700x.jpg'
   },
   {
     id: 'amd-ryzen-5-7600',
@@ -129,7 +129,7 @@ const cpu = [
     type: 'AM5',
     tier: 'mid-range',
     bestFor: 'Gaming and general computing',
-    image: './imgas/CPU/amd-ryzen-5-7600.jpg'
+    image: '/imgas/CPU/amd-ryzen-5-7600.jpg'
   },
   {
     id: 'intel-core-i3-12100f',
@@ -140,7 +140,7 @@ const cpu = [
     type: 'LGA1700',
     tier: 'budget',
     bestFor: 'Entry-level gaming and office tasks',
-    image: './imgas/CPU/intel-core-i3-12100f.jpg'
+    image: '/imgas/CPU/intel-core-i3-12100f.jpg'
   },
   {
     id: 'amd-ryzen-7-7700',
@@ -151,7 +151,7 @@ const cpu = [
     type: 'AM5',
     tier: 'mid-range',
     bestFor: 'Compact gaming and productivity',
-    image: './imgas/CPU/amd-ryzen-7-7700.jpg'
+    image: '/imgas/CPU/amd-ryzen-7-7700.jpg'
   },
   {
     id: 'amd-ryzen-9-9950x',
@@ -162,7 +162,7 @@ const cpu = [
     type: 'AM5',
     tier: 'premium',
     bestFor: 'High-end gaming and workstation builds',
-    image: './imgas/CPU/amd-ryzen-9-9950x.jpg'
+    image: '/imgas/CPU/amd-ryzen-9-9950x.jpg'
   },
   {
     id: 'intel-core-i7-265kf',
@@ -173,7 +173,7 @@ const cpu = [
     type: 'LGA1700',
     tier: 'high-end',
     bestFor: 'Gaming and general high-performance computing',
-    image: './imgas/CPU/intel-core-i7-265kf.jpg'
+    image: '/imgas/CPU/intel-core-i7-265kf.jpg'
   },
   {
     id: 'amd-ryzen-9-9900x',
@@ -184,7 +184,7 @@ const cpu = [
     type: 'AM4',
     tier: 'high-end',
     bestFor: 'Gaming and content creation',
-    image: './imgas/CPU/amd-ryzen-9-9900x.jpg'
+    image: '/imgas/CPU/amd-ryzen-9-9900x.jpg'
   },
   {
     id: 'amd-ryzen-7-5800x',
@@ -195,7 +195,7 @@ const cpu = [
     type: 'AM4',
     tier: 'high-end',
     bestFor: 'Gaming and productivity',
-    image: './imgas/CPU/amd-ryzen-7-5800x.jpg'
+    image: '/imgas/CPU/amd-ryzen-7-5800x.jpg'
   },
   {
     id: 'amd-ryzen-5-9600',
@@ -206,7 +206,7 @@ const cpu = [
     type: 'AM4',
     tier: 'mid-range',
     bestFor: 'Gaming and general computing',
-    image: './imgas/CPU/amd-ryzen-5-9600.jpg'
+    image: '/imgas/CPU/amd-ryzen-5-9600.jpg'
   },
   {
     id: 'intel-core-i5-12600k',
@@ -217,7 +217,7 @@ const cpu = [
     type: 'LGA1700',
     tier: 'high-end',
     bestFor: 'Gaming and productivity',
-    image: './imgas/CPU/intel-core-i5-12600k.jpg'
+    image: '/imgas/CPU/intel-core-i5-12600k.jpg'
   },
   {
     id: 'amd-ryzen-5-8500g',
@@ -228,7 +228,7 @@ const cpu = [
     type: 'AM5',
     tier: 'mid-range',
     bestFor: 'Budget-friendly gaming and office use',
-    image: './imgas/CPU/amd-ryzen-5-8500g.jpg'
+    image: '/imgas/CPU/amd-ryzen-5-8500g.jpg'
   },
   {
     id: 'intel-core-i5-245kf',
@@ -239,7 +239,7 @@ const cpu = [
     type: 'LGA1700',
     tier: 'high-end',
     bestFor: 'Gaming and high-performance tasks',
-    image: './imgas/CPU/intel-core-i5-245kf.jpg'
+    image: '/imgas/CPU/intel-core-i5-245kf.jpg'
   },
   {
     id: 'intel-core-i9-13900kf',
@@ -250,7 +250,7 @@ const cpu = [
     type: 'LGA1700',
     tier: 'premium',
     bestFor: 'Extreme gaming and workstation setups',
-    image: './imgas/CPU/intel-core-i9-13900kf.jpg'
+    image: '/imgas/CPU/intel-core-i9-13900kf.jpg'
   },
   {
     id: 'intel-core-i5-12400f-tray',
@@ -261,7 +261,7 @@ const cpu = [
     type: 'LGA1700',
     tier: 'mid-range',
     bestFor: 'Budget-friendly Intel builds',
-    image: './imgas/CPU/intel-core-i5-12400f-tray.jpg'
+    image: '/imgas/CPU/intel-core-i5-12400f-tray.jpg'
   },
   {
     id: 'amd-ryzen-7-7700-am5',
@@ -272,7 +272,7 @@ const cpu = [
     type: 'AM5',
     tier: 'high-end',
     bestFor: 'Gaming and productivity builds',
-    image: './imgas/CPU/amd-ryzen-7-7700-am5.jpg'
+    image: '/imgas/CPU/amd-ryzen-7-7700-am5.jpg'
   },
   {
     id: 'amd-ryzen-9-9900x3d',
@@ -283,7 +283,7 @@ const cpu = [
     type: 'AM4',
     tier: 'premium',
     bestFor: 'Gaming enthusiasts and workstation builds',
-    image: './imgas/CPU/amd-ryzen-9-9900x3d.jpg'
+    image: '/imgas/CPU/amd-ryzen-9-9900x3d.jpg'
   },
   {
     id: 'intel-core-i9-285',
@@ -294,7 +294,7 @@ const cpu = [
     type: 'AM4',
     tier: 'premium',
     bestFor: 'Gaming and professional workloads',
-    image: './imgas/CPU/intel-core-i9-285.jpg'
+    image: '/imgas/CPU/intel-core-i9-285.jpg'
   },
   {
     id: 'intel-core-i5-13600k',
@@ -305,7 +305,7 @@ const cpu = [
     type: 'LGA1700',
     tier: 'high-end',
     bestFor: 'Gaming and productivity',
-    image: './imgas/CPU/intel-core-i5-13600k.jpg'
+    image: '/imgas/CPU/intel-core-i5-13600k.jpg'
   },
   {
     id: 'intel-core-i7-12700kf',
@@ -316,7 +316,7 @@ const cpu = [
     type: 'LGA1700',
     tier: 'high-end',
     bestFor: 'Gaming and workstation builds',
-    image: './imgas/CPU/intel-core-i7-12700kf.jpg'
+    image: '/imgas/CPU/intel-core-i7-12700kf.jpg'
   },
   {
     id: 'intel-core-i9-12900kf',
@@ -327,6 +327,6 @@ const cpu = [
     type: 'LGA1700',
     tier: 'high-end',
     bestFor: 'Gaming and high-performance tasks',
-    image: './imgas/CPU/intel-core-i9-12900kf.jpg'
+    image: '/imgas/CPU/intel-core-i9-12900kf.jpg'
   }
 ];
